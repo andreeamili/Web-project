@@ -19,16 +19,22 @@
 
   .home {
     background-color: #000;
-    top: 0;
-  position: relative;
-
-    
+    position: absolute;
+    top:0;
   }
   .text-align{
     position: absolute;
-  top: 50%;
-  left: 50%;
+    top: 600px;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+    color: #eee;
+    background-color: black;
+    font-size: 24px; /* dimensiunea fontului pentru desktop */
+  }
   
-  text-align: center;
-  color: #eee;
+  .home-change-color{
+    background-color: rgb(156, 66, 66) !important;
+    right: 20%;
+    left: 20%;
   }
