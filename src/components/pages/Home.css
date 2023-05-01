@@ -4,10 +4,20 @@
   position:absolute;
   max-height: 550px; 
   width: 16000px;
-  background-position: center top;
-  z-index: -1;
+ 
+  
 }
 .image-image img {
     max-width: 100%;
     height: auto;
+    padding-top: 0%;
+    top: 0;
+  left: 0;
+  }
+
+  body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    position: relative;
   }
