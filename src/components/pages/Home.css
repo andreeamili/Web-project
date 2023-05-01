@@ -1,23 +1,34 @@
 .home-image{
-    max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1600px;
+  width: 100%;
   height: auto;
-  position:absolute;
-  max-height: 550px; 
-  width: 16000px;
- 
-  
+  max-height: 550px;
+
 }
-.image-image img {
+.home-image img {
     max-width: 100%;
-    height: auto;
     padding-top: 0%;
     top: 0;
-  left: 0;
+    left: 0;
+    position: absolute;
   }
 
-  body {
+  .home {
     background-color: #000;
-    margin: 0;
-    padding: 0;
-    position: relative;
+    top: 0;
+  position: relative;
+
+    
+  }
+  .text-align{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  text-align: center;
+  color: #eee;
   }
