@@ -8,6 +8,7 @@
   
   .menu-bars {
     margin-left: 2rem;
+    padding-top: 10px;
     font-size: 2rem;
     background: none;
   }
@@ -67,6 +68,35 @@
     align-items: center;
   }
   
+  .left-side {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .left-side-icon{
+    padding-left: 5px;
+    padding-top: 3px; 
+  }
+
+  .left-side-subtitle {
+    position: absolute;
+    top: 0;
+    left:90px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  .left-side span {
+    color: #fff;
+  }
+ 
+ 
+
   span {
     margin-left: 16px;
   }

@@ -1,0 +1,13 @@
+.home-image{
+    max-width: 100%;
+  height: auto;
+  position:absolute;
+  max-height: 550px; 
+  width: 16000px;
+  background-position: center top;
+  z-index: -1;
+}
+.image-image img {
+    max-width: 100%;
+    height: auto;
+  }
