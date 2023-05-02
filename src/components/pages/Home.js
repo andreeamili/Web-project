@@ -3,21 +3,10 @@ import homeImage from '../pages/pictures/Home_Fundal.jpg';
 import './Home.css';
 
 function Home() {
-  const style = {
-    backgroundColor: 'black',
-    position: 'absolute',
-    top: '80px',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  };
   
   return (
-    <home style={style}>
+    <>
+    <div className='home'>
       <div>
         <img className='home-image' src={homeImage} alt='Home Background' /></div>
       <div className='text-align '>
@@ -43,7 +32,8 @@ function Home() {
         </p>
         </div>
         
-    </home>
+    </div>
+    </>
   );
 }
 

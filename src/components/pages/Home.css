@@ -18,9 +18,16 @@
   }
 
   .home {
-    background-color: #000;
+    background-Color: black;
     position: absolute;
-    top:0;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-Direction: column;
+    justify-Content: center;
+    align-Items: center;
   }
   .text-align{
     position: absolute;
