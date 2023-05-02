@@ -4,12 +4,19 @@ import "./Authentication.css"
 function Authentication() {
   return (
     <div className='authentication'>
-      <h1>Login</h1>
-      <input type="text" placeholder="username" />
-      <input type="password" placeholder="username" />
-      <div className='login-btn'>Login</div>
-      <p className='text'>Or Login using</p>
-      <div className='alt-login'>
+      <div >
+        <table className='tabel-login'>
+          <div >
+          <h3 className='text align-header'>Login</h3>
+          <input type="text" placeholder="phone number" />
+          <input type="password" placeholder="password" />
+          <div className='login-btn text login-btn-font'>Login</div>
+          <p className='text-forgotten'>Forgot password?</p>
+          <p className='text-create'>If you don't have an account,</p>
+          <p className='text-create'>you can create one!</p>
+          </div>
+          <div className='create-btn create-btn-font'>Create</div>
+        </table>
       </div>
     </div>
   );

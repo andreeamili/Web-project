@@ -1,14 +1,16 @@
 .authentication{
-    background-color: white;
-    width: 70%;
-    height: 50%;
+    background-image: url('./pictures/horse-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
     position: relative;
-    border-radius: 2em;
-    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    
+    
 }
 
 .authentication *{
@@ -16,36 +18,141 @@
     font-family: "CustomFont";
     margin: 0;
 }
-
-
 @font-face {
     font-family: "CustomFont";
     src: url('../pages/fonts/RolexLight.woff2');
 }
-
-.page{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 0.75em;
+table{
+    margin: 0 auto;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+    border-radius: 1em;
+    text-align: center;
+    z-index: 2;
 }
 
-.alt-login{
-    width: 80%;
-    height: 3em;
-    display: flex;
-    justify-content: space-around;
+.tabel-login{
+   
+    width: 60vh;
+    height: 70vh;
 }
-.alt-login div{
-    width: 47.5%;
-    height: 90%;
+
+input {
+    border: none;
+    background-color: rgb(247, 240, 240);
+    width: 70%;
     border-radius: 0.25em;
-    background-color: black;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    cursor: pointer;
+    text-align: center;
+    padding: 0.1em;
+    font-size: 0.4em;
 }
 
+input:focus {
+    outline-color: rgb(24, 27, 25);
+}
+.login-btn {
+    width: 35%;
+    height: 1em;
+    background-color: rgb(82, 59, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    margin: 30px auto;
+}
+.login-btn-font{
+    font-size: 1vw;
+    color: aliceblue;
+    padding: 10px;
+} 
+.create-btn {
+    width: 25%;
+    height: 1em;
+    background-color: rgb(82, 59, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px auto;
+}
+
+.create-btn-font{
+    font-size: 1vw;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.align-header{
+    padding: 50px;
+    text-shadow: 4px 4px 4px #663300;
+}
+
+.text-forgotten{
+   padding-bottom: 20px;
+}
+.text-create{
+    padding: 0px;
+    text-shadow: 2px 2px 4px #fff;
+}
+@media (max-width: 768px) {
+    .align-header {
+      font-size: 30px;
+    }
+    .login-btn-font {
+        font-size: 20px;
+      }
+      .text-forgotten {
+        font-size: 10px;
+      }
+      .text-create{
+        font-size: 10px;
+      }
+      .create-btn-font {
+        font-size: 13px;
+      }
+      
+  }
+  
+  @media (min-width: 576px) {
+    .align-header {
+      font-size: 30px;
+    }
+    .login-btn-font {
+        font-size: 20px;
+      }
+      .text-forgotten {
+        font-size: 10px;
+      }
+      .text-create {
+        font-size: 10px;
+      }
+      .create-btn-font {
+        font-size: 13px;
+      }
+      
+  }
+.login-btn:hover { transform: scale(1.25);}
+.create-btn:hover { transform: scale(1.25);}
+
+@media screen and (max-width: 768px) {
+    .tabel-login {
+        width: 80vw;
+        height: auto;
+    }
+    input {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .tabel-login {
+        width: 90vw;
+        height: auto;
+    }
+  }
