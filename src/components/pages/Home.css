@@ -7,6 +7,7 @@
   width: 100%;
   height: auto;
   max-height: 550px;
+  z-index: 1;
 
 }
 .home-image img {
@@ -31,14 +32,22 @@
   }
   .text-align{
     position: absolute;
-    top: 600px;
+    padding-top: 110%;
     padding-left: 20%;
     padding-right: 20%;
     text-align: center;
     color: #eee;
     background-color: black;
     font-size: 24px; 
+    
 
   }
+
+  .align-down{
+    padding-top: 10%;
+    padding-bottom: 20%;
+  }
+
+
   
  

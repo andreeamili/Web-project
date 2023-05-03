@@ -27,7 +27,6 @@ function Navbar() {
             </div>
           </h1>
           <div className="left-side-subtitle">Sibiu Equestrian Base</div>
-
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
         
           <ul className='nav-menu-items' onClick={showSidebar}>

@@ -1,0 +1,171 @@
+
+.services{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.ionel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+
+}
+
+.ionel-image img {
+    max-width: 100%;
+    padding-top: 0%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.adelina-image {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+
+}
+
+.adelina-image img {
+    max-width: 100%;
+    padding-top: 0%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.daniel-image {
+    position: absolute;
+    top: 230%;
+    left: 0;
+    right: 0;
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    
+
+}
+
+.daniel-image img {
+    max-width: 100%;
+    padding-top: 0%;
+    top: 0;
+    left: 0;
+    
+}
+.gruia-image {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    right: 0;
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    
+
+}
+
+.gruia-image img {
+    max-width: 100%;
+    padding-top: 0%;
+    top: 0;
+    left: 0;
+    
+}
+
+
+.ionel-text{
+    z-index: 1;
+    padding-right: 40%;
+    padding-top: 10%;
+    text-align: center;
+    text-shadow: 2px 2px 4px #6680a3;
+    font-size: 5vh;
+    transition: all 0.3s ease-in-out;
+    
+}
+.adelina-text{
+    z-index: 1;
+    padding-left: 60%;
+    padding-top: 35%;
+    text-align: center;
+    text-shadow: 2px 2px 4px #6680a3;
+    color: #c5c0c0;
+    font-size: 4vh;
+    
+}
+.gruia-text{
+    z-index: 1;
+    padding-right: 10%;
+    padding-bottom: 50%;
+    text-align: center;
+    text-shadow: 2px 2px 4px #909398;
+    color: #f8f8f8;
+    font-size: 5vh;
+    
+}
+.daniel-text{
+    z-index: 2;
+    padding-left: 40%;
+    padding-top: 85%;
+    text-align: center;
+    text-shadow: 2px 2px 4px #777f8b;
+    color: #000000;
+    font-size: 5.5vh;
+    
+}
+.space{
+    letter-spacing: 0.1em;
+}
+  
+  .text-hovered {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+
+@media (max-width: 768px) {
+    .ionel-text {
+      font-size: 1vh;
+    }
+    .adelina-text {
+        font-size: 1vh;
+      }
+      .gruia-text {
+        font-size: 1vh;
+      }
+      .daniel-text{
+        font-size: 1vh;
+      }
+
+      
+  }
+  
+  @media (min-width: 576px) {
+    .ionel-text {
+        font-size: 5vh;
+      }
+      .adelina-text {
+          font-size: 4vh;
+        }
+        .gruia-text {
+          font-size: 5vh;
+        }
+        .daniel-text{
+          font-size: 5.5vh;
+        }
+      
+  }

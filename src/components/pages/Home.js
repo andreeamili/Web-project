@@ -1,5 +1,6 @@
 import React from 'react'
 import homeImage from '../pages/pictures/Home_Fundal.jpg';
+import downImage from './pictures/horse-down.jpg'
 import './Home.css';
 
 function Home() {
@@ -30,8 +31,10 @@ function Home() {
         So if you are passionate about horses and riding and want to develop your skills and participate in equestrian 
         competitions and events, we look forward to welcoming you to CSM Equestrian Club Sibiu!
         </p>
+        <p className='align-down'>So don't wait any longer<br></br> and join us!</p>
+
         </div>
-        
+       
     </div>
     </>
   );
