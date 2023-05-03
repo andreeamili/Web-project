@@ -37,11 +37,8 @@
     text-align: center;
     color: #eee;
     background-color: black;
-    font-size: 24px; /* dimensiunea fontului pentru desktop */
+    font-size: 24px; 
+
   }
   
-  .home-change-color{
-    background-color: rgb(156, 66, 66) !important;
-    right: 20%;
-    left: 20%;
-  }
+ 

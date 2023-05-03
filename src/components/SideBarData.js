@@ -11,8 +11,8 @@ export const SidebarData=[
         cName: 'nav-text'
     },
     {
-        title: 'About us',
-        path:'/about_us',
+        title: 'About',
+        path:'/about',
         icon: <GiIcons.GiBookmarklet/>,
         cName: 'nav-text' 
     },
