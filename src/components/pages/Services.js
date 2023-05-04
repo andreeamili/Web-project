@@ -43,8 +43,9 @@ function Services() {
   return (
     <div className='services'>
       <div>
-        <img className='ionel-image' src={ionelImage} alt='Home Background' /></div>
-      <div className='ionel-text'>
+        <img className='ionel-image' src={ionelImage} alt='Home Background' />
+      </div>
+      <div className='text'>
         <p className='space'>
           <strong>Show jumping</strong>
         </p>
@@ -56,15 +57,9 @@ function Services() {
       </div>
       <div>
         <img className='adelina-image' src={adelinaImage} alt='Home Background' /></div>
-      <div className='adelina-text'>
+      <div className='text'>
       <p className='space'>
-          <strong>Agrement</strong>
-        </p>
-        <p className='space'>
-          <strong>Show jumping</strong>
-        </p>
-        <p className='space'>
-          <strong>Dressage </strong>
+          <strong>Agrement  Show jumping    Dressage</strong>
         </p>
         <p className={`text ${hovered1 ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter1}
@@ -74,7 +69,7 @@ function Services() {
       </div>
       <div>
         <img className='gruia-image' src={gruiaImage} alt='Home Background' /></div>
-      <div className='gruia-text'>
+      <div className='text'>
         <p className='space'>
           <strong>Show jumping</strong>
         </p>
@@ -86,14 +81,14 @@ function Services() {
       </div>
       <div>
         <img className='daniel-image' src={danielImage} alt='Home Background' /></div>
-      <div className='daniel-text'>
+      <div className='text'>
         <p className='space'>
           <strong>Show jumping</strong>
         </p>
         <p className={`text ${hovered3 ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter3}
         onMouseLeave={handleMouseLeave3}>
-          <strong>Bucur Daniel</strong>
+          <strong>Bucur Ionut Daniel</strong>
         </p>
       </div>
     </div>

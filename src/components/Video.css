@@ -1,0 +1,16 @@
+.full-width-video {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+  }
+  @media (min-width: 350px) and (max-width: 550px) {
+    .full-width-video {
+      margin-top: 10%;
+      }
+ }
+ @media (min-width: 550px) and (max-width: 850px) {
+    .full-width-video {
+      margin-top: 5%;
+      }
+ }

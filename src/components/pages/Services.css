@@ -1,13 +1,17 @@
-
+*{
+ /* border: 1px solid red; */ 
+}
 .services{
     display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+ 
 }
+ 
 .ionel-image {
-    position: absolute;
-    top: 0;
+    position: relative;
+    
     left: 0;
     right: 0;
     max-width: 1600px;
@@ -22,11 +26,11 @@
     padding-top: 0%;
     top: 0;
     left: 0;
-    position: absolute;
+    position: relative;
 }
 
 .adelina-image {
-    position: absolute;
+    position: relative;
     top: 80%;
     left: 0;
     right: 0;
@@ -42,11 +46,11 @@
     padding-top: 0%;
     top: 0;
     left: 0;
-    position: absolute;
+    position: relative;
 }
 
 .daniel-image {
-    position: absolute;
+    position: relative;
     top: 230%;
     left: 0;
     right: 0;
@@ -66,8 +70,7 @@
     
 }
 .gruia-image {
-    position: absolute;
-    top: 150%;
+    position: relative;
     left: 0;
     right: 0;
     max-width: 1600px;
@@ -86,47 +89,19 @@
     
 }
 
-
-.ionel-text{
+.text{
     z-index: 1;
-    padding-right: 40%;
-    padding-top: 10%;
+    margin-left: 11%;
+    padding-right: 15%;
+    margin-top: 0;
+    margin-bottom: 5%;
     text-align: center;
-    text-shadow: 2px 2px 4px #6680a3;
-    font-size: 5vh;
-    transition: all 0.3s ease-in-out;
-    
-}
-.adelina-text{
-    z-index: 1;
-    padding-left: 60%;
-    padding-top: 35%;
-    text-align: center;
-    text-shadow: 2px 2px 4px #6680a3;
-    color: #c5c0c0;
+    text-shadow: 2px 2px 4px #989898;
+    color: #000000;
     font-size: 4vh;
     
 }
-.gruia-text{
-    z-index: 1;
-    padding-right: 10%;
-    padding-bottom: 50%;
-    text-align: center;
-    text-shadow: 2px 2px 4px #909398;
-    color: #f8f8f8;
-    font-size: 5vh;
-    
-}
-.daniel-text{
-    z-index: 2;
-    padding-left: 40%;
-    padding-top: 85%;
-    text-align: center;
-    text-shadow: 2px 2px 4px #777f8b;
-    color: #000000;
-    font-size: 5.5vh;
-    
-}
+
 .space{
     letter-spacing: 0.1em;
 }
@@ -154,18 +129,18 @@
       
   }
   
-  @media (min-width: 576px) {
-    .ionel-text {
-        font-size: 5vh;
+  
+  @media (min-width: 350px) and (max-width: 700px) {
+    .text {
+      font-size: 0.5em;
       }
-      .adelina-text {
-          font-size: 4vh;
-        }
-        .gruia-text {
-          font-size: 5vh;
-        }
-        .daniel-text{
-          font-size: 5.5vh;
-        }
-      
-  }
+    .space{
+      font-size: 0.8em;
+    }
+      .ionel-image{
+        margin-top: 10%;
+        
+      }
+
+
+ }
