@@ -8,8 +8,7 @@ function Home() {
   return (
     <>
     <div className='home'>
-      <div>
-        <img className='home-image' src={homeImage} alt='Home Background' /></div>
+        <img className='home-image' src={homeImage} alt='Home Background' />
       <div className='text-align '>
         <p>
         Welcome to the CSM Equestrian Club Sibiu website! We are a passionate community of horse lovers dedicated to improving

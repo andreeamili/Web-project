@@ -1,0 +1,119 @@
+.team-image{
+    position: relative;
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    text-align: center;
+    
+    
+  }
+  .image1{
+    position: absolute;
+    max-width: 1600px;
+    width: 30%;
+    height: auto;
+    max-height: 700px;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    z-index: 1;
+    box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
+    transition: 1s;
+    margin-left: 40%;
+  }
+  .image1:hover {
+    transform: scale(1.1);
+  }
+  .image2{
+    position: relative;
+    max-width: 1600px;
+    width: 30%;
+    height: auto;
+    max-height: 700px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    box-shadow: 0 0.188em 1.550em rgb(12, 12, 12);
+    transition: 1s;
+    margin-left: 30%;
+
+  }
+  .text-margin{
+    padding-bottom: 10%;
+    padding-top: 5%;
+    text-align: center;
+    font-size: 4vh;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .image2:hover {
+    transform: scale(1.1);
+    filter: blur(0);
+    z-index: 1;
+  }
+  .blur-image{
+    filter: blur(4px);
+  }
+
+  .text-team{
+    text-align: center;
+    font-size: 5vh;
+    margin-top: 3%;
+    margin-bottom: 8%;
+   color: black;
+   font-family: "CustomFont";
+   
+    
+  }
+  @font-face {
+    font-family: "CustomFont";
+    src: url('../pages/fonts/RolexLight.woff2');
+}
+  .content-team{
+    text-align: center;
+    font-size: 4vh;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  @media (min-width: 350px) and (max-width: 550px) {
+      .text-team {
+        font-size:2vh;
+        }
+        .team-image{
+            margin-top: 20%;
+        }
+        .content-team {
+            font-size:2vh;
+            }
+  }
+  @media (min-width: 350px) and (max-width: 550px) {
+    .text-team {
+      font-size:3vh;
+      }
+      .team-image{
+          margin-top: 30%;
+      }
+      .content-team {
+        font-size:2vh;
+        }
+        .text-margin {
+            font-size:2vh;
+            }
+}
+  @media (min-width: 550px) and (max-width: 850px) {
+
+      .text-team {
+        font-size:4vh;
+        }
+        .team-image{
+            margin-top: 20%;
+        }
+        .content-team {
+            font-size:3vh;
+            }
+            .text-margin {
+                font-size:3vh;
+                }
+    }

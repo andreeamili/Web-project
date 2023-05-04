@@ -9,6 +9,7 @@ import Authentication from './components/pages/Authentication';
 import Stables from './components/pages/Stables';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
+import OurTeame from './components/pages/OurTeam';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <Routes>
       <Route path='/' exact element={<Home />} />
       <Route path='/about' element={<About />}/>
+      <Route path='/out-team' element={<OurTeame />}/>
       <Route path='/services' element={<Services />}/>
       <Route path='/competitions' element={<Competitions />}/>
       <Route path='/stables' element={<Stables />}/>

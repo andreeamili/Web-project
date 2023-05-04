@@ -11,9 +11,15 @@ export const SidebarData=[
         cName: 'nav-text'
     },
     {
-        title: 'About',
+        title: 'About us',
         path:'/about',
         icon: <GiIcons.GiBookmarklet/>,
+        cName: 'nav-text' 
+    },
+    {
+        title: 'Our Team',
+        path:'/out-team',
+        icon: <AiIcons.AiOutlineTeam/>,
         cName: 'nav-text' 
     },
     {
