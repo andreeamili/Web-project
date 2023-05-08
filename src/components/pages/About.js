@@ -5,6 +5,7 @@ import Samir from './pictures/Samir.jpg'
 import Sara from './pictures/Sara.jpg'
 import Rozi from './pictures/Rozi.jpg'
 import Bacardi from './pictures/Bacardi.jpg'
+import Pauline from './pictures/Pauline.jpg'
 
 function About() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -33,11 +34,18 @@ function About() {
       <div className='content-about align'>And even if you're not passionate about this sport or curious to experience what it's like to team
         up with a partner who doesn't speak the same language as you, you can always come and visit our horses who are waiting for
         you with open arms and hope that you'll bring them a reward for the hard work they put in for us every day.</div>
-       <div className='image-container '>
-        <img className='mySlides slide-animation' src={Sara} alt='Sara' />
-        <img className='mySlides slide-animation' src={Bacardi} alt='Bacardi' />
-        <img className='mySlides slide-animation' src={Samir} alt='Samir' />
-        <img className='mySlides slide-animation' src={Rozi} alt='Rozi' />
+        <div className='content-about align'>
+        These were just a few of our horses, graceful and powerful animals that delight our eyes and inspire our admiration.
+         Whether they are used in equestrian sports, agriculture, or simply as pets, horses are truly special and deserve all our
+          attention.
+        </div>
+       <div className='gallery '>
+       
+                <img className='image1 new-margin1-1' src={Sara} alt='antrenor' />
+                <img className='image2 new-margin2 blur-image' src={Bacardi} alt='antrenor' />
+                <img className='image1 new-margin1' src={Samir} alt='antrenor' />
+                <img className='image2 new-margin2 blur-image' src={Rozi} alt='antrenor' />
+                <img className='image2 new-margin2 blur-image' src={Pauline} alt='antrenor' />
         </div>
     </div>
 

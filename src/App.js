@@ -10,6 +10,7 @@ import Stables from './components/pages/Stables';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import OurTeame from './components/pages/OurTeam';
+import Adelina from './components/pages/Adelina';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path='/stables' element={<Stables />}/>
       <Route path='/contact' element={<Contact />}/>
       <Route path='/authentication' element={<Authentication />}/>
+      <Route path='/adelina' element={<Adelina />}/>
     </Routes>
     </Router>
     </>

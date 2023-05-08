@@ -1,5 +1,6 @@
 import React, { useState }  from 'react'
 import './Services.css'
+import { Link } from 'react-router-dom';
 import adelinaImage from './pictures/Home_Fundal.jpg'
 import ionelImage from './pictures/ionel-bucur2.jpg'
 import danielImage from './pictures/daniel.jpg'
@@ -52,7 +53,10 @@ function Services() {
         <p  className={`text ${hovered ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
-          <strong>Bucur Ionel</strong>
+          <Link to='/ionel' className='edit-link'>
+          <span> <strong>Bucur Ionel</strong></span>
+          </Link>
+         
         </p>
       </div>
       <div>
@@ -64,7 +68,10 @@ function Services() {
         <p className={`text ${hovered1 ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter1}
         onMouseLeave={handleMouseLeave1}>
-          <strong>Paralescu Adelina</strong>
+          <Link to='/adelina' className='edit-link'>
+          <span><strong>Paralescu Adelina</strong></span>
+          </Link>
+          
         </p>
       </div>
       <div>
@@ -76,7 +83,10 @@ function Services() {
         <p className={`text ${hovered2 ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter2}
         onMouseLeave={handleMouseLeave2}>
-          <strong>Gruia</strong>
+          <Link to='/gruia' className='edit-link'>
+          <span><strong>Gruia</strong></span>
+          </Link>
+         
         </p>
       </div>
       <div>
@@ -88,7 +98,9 @@ function Services() {
         <p className={`text ${hovered3 ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter3}
         onMouseLeave={handleMouseLeave3}>
-          <strong>Bucur Ionut Daniel</strong>
+          <Link to='/daniel' className='edit-link'>
+          <span> <strong>Bucur Ionut Daniel</strong></span>
+          </Link>
         </p>
       </div>
     </div>

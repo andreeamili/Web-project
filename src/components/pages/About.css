@@ -2,21 +2,13 @@
   width: 100%;
   position: relative;
 }
-.mySlides{
-  position: relative;
-  max-width: 1600px;
-  width: 40%;
-  height: auto;
-  max-height: 500px;
-  margin-right: 20%;
-
-}
 .about-us-image {
   position: relative;
   max-width: 1600px;
   width: 100%;
   height: auto;
   max-height: 500px;
+  box-shadow: 0 0.188em 1.550em rgb(12, 12, 12);
 }
 
 .about-us-image {
@@ -41,8 +33,8 @@
   src: url('../pages/fonts/RolexLight.woff2');
 }
 .align{
-  padding-top: 5%;
-  padding-bottom: 10%;
+  padding-top: 4%;
+  padding-bottom: 3%;
 }
 .content-about{
   text-align: center;
@@ -79,15 +71,53 @@
         font-size:4vh;
       }
 }
-.slide-animation {
-  animation-name: slide;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
+.image1{
+  position: absolute;
+  max-width: 1600px;
+  width: 30%;
+  height: auto;
+  max-height: 700px;
+  margin-left: 15%;
+  margin-bottom: 20%;
+  margin-top: 10%;
+  z-index: 1;
+  box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
+  transition: 1s;
+}
+.image1:hover {
+  transform: scale(1.1);
+}
+.new-margin2{
+  margin-left: 3% !important;
+  margin-bottom: 20% !important;
+}
+.new-margin1{
+  margin-left: 20% !important;
+  margin-bottom: 20% !important;
+}
+.new-margin1-1{
+  margin-left: 15% !important;
+  margin-bottom: 20% !important;
 }
 
-@keyframes slide {
-  0% { opacity: 0; transform: translateX(-50px); }
-  50% { opacity: 1; transform: translateX(0); }
-  100% { opacity: 0; transform: translateX(50px); }
+.image2{
+  position: relative;
+  max-width: 1600px;
+  width: 30%;
+  height: auto;
+  max-height: 700px;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  box-shadow: 0 0.188em 1.550em rgb(12, 12, 12);
+  transition: 1s;
+
 }
+
+  .image2:hover {
+    transform: scale(1.1);
+    filter: blur(0);
+    z-index: 1;
+  }
+  .blur-image{
+    filter: blur(4px);
+  }
