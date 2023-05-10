@@ -1,3 +1,4 @@
+
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router ,Routes, Route } from 'react-router-dom';
@@ -21,12 +22,14 @@ function App() {
       <Route path='/' exact element={<Home />} />
       <Route path='/about' element={<About />}/>
       <Route path='/out-team' element={<OurTeame />}/>
-      <Route path='/services' element={<Services />}/>
+      <Route path='/services' element={<Services />}>
+      <Route path='adelina' element={<Adelina />}/>
+        </Route>
       <Route path='/competitions' element={<Competitions />}/>
       <Route path='/stables' element={<Stables />}/>
       <Route path='/contact' element={<Contact />}/>
       <Route path='/authentication' element={<Authentication />}/>
-      <Route path='/adelina' element={<Adelina />}/>
+      
     </Routes>
     </Router>
     </>

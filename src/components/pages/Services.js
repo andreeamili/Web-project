@@ -1,10 +1,13 @@
+
 import React, { useState }  from 'react'
 import './Services.css'
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import adelinaImage from './pictures/Home_Fundal.jpg'
 import ionelImage from './pictures/ionel-bucur2.jpg'
 import danielImage from './pictures/daniel.jpg'
 import gruiaImage from './pictures/gruia3.jpg'
+import Adelina from './Adelina';
 
 function Services() {
   const [hovered, setHovered] = useState(false);
