@@ -1,19 +1,19 @@
-
 import React, { useState }  from 'react'
 import './Services.css'
-import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
 import adelinaImage from './pictures/Home_Fundal.jpg'
 import ionelImage from './pictures/ionel-bucur2.jpg'
 import danielImage from './pictures/daniel.jpg'
 import gruiaImage from './pictures/gruia3.jpg'
-import Adelina from './Adelina';
 
 function Services() {
   const [hovered, setHovered] = useState(false);
   const [hovered1, setHovered1] = useState(false);
   const [hovered2, setHovered2] = useState(false);
   const [hovered3, setHovered3] = useState(false);
+  const [clicked, setClicked] = useState(false);
+  const [clicked1, setClicked1] = useState(false);
+  const [clicked2, setClicked2] = useState(false);
+  const [clicked3, setClicked3] = useState(false);
 
   const handleMouseEnter = () => {
     setHovered(true);
@@ -44,6 +44,19 @@ function Services() {
   const handleMouseLeave3 = () => {
     setHovered3(false);
   };
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+  const handleClick1 = () => {
+    setClicked1(!clicked1);
+  };
+  const handleClick2 = () => {
+    setClicked2(!clicked2);
+  };
+ 
+  const handleClick3 = () => {
+    setClicked3(!clicked3);
+  };
   return (
     <div className='services'>
       <div>
@@ -56,9 +69,13 @@ function Services() {
         <p  className={`text ${hovered ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>
-          <Link to='/ionel' className='edit-link'>
-          <span> <strong>Bucur Ionel</strong></span>
-          </Link>
+         
+           <strong  onClick={handleClick}>Bucur Ionel</strong>
+           {clicked && (
+            <p className='subtext'>
+              Jumping session 100 RON
+            </p>
+          )}
          
         </p>
       </div>
@@ -66,14 +83,24 @@ function Services() {
         <img className='adelina-image' src={adelinaImage} alt='Home Background' /></div>
       <div className='text'>
       <p className='space'>
-          <strong>Agrement  Show jumping    Dressage</strong>
+          <strong>Agrement   Show jumping     Dressage</strong>
         </p>
         <p className={`text ${hovered1 ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter1}
         onMouseLeave={handleMouseLeave1}>
-          <Link to='/adelina' className='edit-link'>
-          <span><strong>Paralescu Adelina</strong></span>
-          </Link>
+          <strong onClick={handleClick1}>Paralescu Adelina</strong>
+          {clicked1 && (
+            <p className='subtext'>
+              Sedinta incepatori 30 min 70 ron -abonament 10 sedinte 630 RON <br></br>
+              Sedinta incepatori 45 min 80 ron -abonament 10 sedinte 720 RON <br></br>
+              Sedinta sarituri intermediar 30 min 80 ron -abonament 10 sedinte 720 RON  <br></br>
+              Sedinta sarituri intermediar 45 min 90 ron -abonament 10 sedinte 810 RON  <br></br>
+              Sedinta sarituri avansati 30 min 90 ron -abonament 10 sedinte 810 RON  <br></br>
+              Sedinta sarituri avansati 45 min 100 ron -abonament 10 sedinte 900 RON  <br></br>
+              Abonament sedinte sarituri incepatori + dresaj 45 min - 750   <br></br>
+              Abonament sedinte sarituri intermediari + dresaj 45 min - 780   <br></br>
+            </p>
+          )}
           
         </p>
       </div>
@@ -86,9 +113,12 @@ function Services() {
         <p className={`text ${hovered2 ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter2}
         onMouseLeave={handleMouseLeave2}>
-          <Link to='/gruia' className='edit-link'>
-          <span><strong>Gruia</strong></span>
-          </Link>
+          <strong onClick={handleClick2}>Gruia</strong>
+          {clicked2 && (
+            <p className='subtext'>
+              Jumping session 100 RON
+            </p>
+          )}
          
         </p>
       </div>
@@ -101,9 +131,12 @@ function Services() {
         <p className={`text ${hovered3 ? "text-hovered" : ""}`}
         onMouseEnter={handleMouseEnter3}
         onMouseLeave={handleMouseLeave3}>
-          <Link to='/daniel' className='edit-link'>
-          <span> <strong>Bucur Ionut Daniel</strong></span>
-          </Link>
+           <strong onClick={handleClick3}>Bucur Ionut Daniel</strong>
+          {clicked3 && (
+            <p className='subtext'>
+              Jumping session 100 RON
+            </p>
+          )}
         </p>
       </div>
     </div>

@@ -1,145 +1,156 @@
 *{
- /* border: 1px solid red; */ 
-}
-.services{
-    display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-}
- 
-.ionel-image {
-    position: relative;
-    
-    left: 0;
-    right: 0;
-    max-width: 1600px;
-    width: 100%;
-    height: auto;
-    max-height: 700px;
-    box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
-
-}
-
-.ionel-image img {
-    max-width: 100%;
-    padding-top: 0%;
-    top: 0;
-    left: 0;
-    position: relative;
-}
-
-.adelina-image {
-    position: relative;
-    top: 80%;
-    left: 0;
-    right: 0;
-    max-width: 1600px;
-    width: 100%;
-    height: auto;
-    max-height: 550px;
-    box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
-
-}
-
-.adelina-image img {
-    max-width: 100%;
-    padding-top: 0%;
-    top: 0;
-    left: 0;
-    position: relative;
-}
-
-.daniel-image {
-    position: relative;
-    top: 230%;
-    left: 0;
-    right: 0;
-    max-width: 1600px;
-    width: 100%;
-    height: auto;
-    max-height: 650px;
-    box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
-    
-
-}
-
-.daniel-image img {
-    max-width: 100%;
-    padding-top: 0%;
-    top: 0;
-    left: 0;
-    
-}
-.gruia-image {
-    position: relative;
-    left: 0;
-    right: 0;
-    max-width: 1600px;
-    width: 100%;
-    height: auto;
-    max-height: 650px;
-    box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
-
-}
-
-.gruia-image img {
-    max-width: 100%;
-    padding-top: 0%;
-    top: 0;
-    left: 0;
-    
-}
-
-.text{
-    z-index: 1;
-    margin-left: 11%;
-    padding-right: 15%;
-    margin-top: 0;
-    margin-bottom: 5%;
-    text-align: center;
-    text-shadow: 2px 2px 4px #989898;
-    color: #000000;
-    font-size: 4vh;
-    
-}
-
-.space{
-    letter-spacing: 0.1em;
-}
-  
-  .text-hovered {
-    cursor: pointer;
-    transform: scale(1.2);
-  }
-
-  .edit-link{
-    color: #000000;
-    text-decoration: none;
-    font-size: 4vh;
-  }
-
-@media (max-width: 700px) {
-    .edit-link {
-      font-size: 2vh;
-    }
-
-      
-  }
-  
-  
-  @media (min-width: 350px) and (max-width: 700px) {
-    .text {
-      font-size: 0.5em;
-      }
-    .space{
-      font-size: 0.8em;
-    }
-      .ionel-image{
-        margin-top: 10%;
-        
-      }
-
-
+  /* border: 1px solid red; */ 
  }
+ .services{
+     display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+ 
+ }
+  
+ .ionel-image {
+     position: relative;
+     
+     left: 0;
+     right: 0;
+     max-width: 1600px;
+     width: 100%;
+     height: auto;
+     max-height: 700px;
+     box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
+ 
+ }
+ 
+ .ionel-image img {
+     max-width: 100%;
+     padding-top: 0%;
+     top: 0;
+     left: 0;
+     position: relative;
+ }
+ 
+ .adelina-image {
+     position: relative;
+     top: 80%;
+     left: 0;
+     right: 0;
+     max-width: 1600px;
+     width: 100%;
+     height: auto;
+     max-height: 550px;
+     box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
+ 
+ }
+ 
+ .adelina-image img {
+     max-width: 100%;
+     padding-top: 0%;
+     top: 0;
+     left: 0;
+     position: relative;
+ }
+ 
+ .daniel-image {
+     position: relative;
+     top: 230%;
+     left: 0;
+     right: 0;
+     max-width: 1600px;
+     width: 100%;
+     height: auto;
+     max-height: 650px;
+     box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
+     
+ 
+ }
+ 
+ .daniel-image img {
+     max-width: 100%;
+     padding-top: 0%;
+     top: 0;
+     left: 0;
+     
+ }
+ .gruia-image {
+     position: relative;
+     left: 0;
+     right: 0;
+     max-width: 1600px;
+     width: 100%;
+     height: auto;
+     max-height: 650px;
+     box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
+ 
+ }
+ 
+ .gruia-image img {
+     max-width: 100%;
+     padding-top: 0%;
+     top: 0;
+     left: 0;
+     
+ }
+ 
+ .text{
+     z-index: 1;
+     margin-left: 11%;
+     padding-right: 15%;
+     margin-top: 0;
+     margin-bottom: 5%;
+     text-align: center;
+     text-shadow: 2px 2px 4px #989898;
+     color: #000000;
+     font-size: 4vh;
+     
+ }
+ 
+ .space{
+     letter-spacing: 0.3em;
+ }
+   
+   .text-hovered {
+     cursor: pointer;
+     transform: scale(1.2);
+   }
+ 
+   .edit-link{
+     color: #000000;
+     text-decoration: none;
+     font-size: 4vh;
+   }
+ 
+ .subtext{
+   font-size: 3vh;
+   text-align: center !important;
+ }
+ 
+ @media (max-width: 700px) {
+     .edit-link {
+       font-size: 2vh;
+     }
+     .subtext{
+       font-size: 2vh;
+     }
+       
+   }
+   
+   
+   @media (min-width: 350px) and (max-width: 700px) {
+     .text {
+       font-size: 0.5em;
+       }
+     .space{
+       font-size: 0.8em;
+     }
+       .ionel-image{
+         margin-top: 10%;
+         
+       }
+       .subtext{
+         font-size: 0.7em;
+       }
+ 
+ 
+  }
+ 

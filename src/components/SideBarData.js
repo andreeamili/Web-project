@@ -35,12 +35,6 @@ export const SidebarData=[
         cName: 'nav-text'
     },
     {
-        title: 'Stables',
-        path:'/stables',
-        icon: <GiIcons.GiStable />,
-        cName: 'nav-text'
-    },
-    {
         title: 'Contact',
         path:'/contact',
         icon: <AiIcons.AiFillPhone />,

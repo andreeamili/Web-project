@@ -7,11 +7,11 @@ import Home from './components/pages/Home';
 import Services from './components/pages/Services';
 import Competitions from './components/pages/Competitons';
 import Authentication from './components/pages/Authentication';
-import Stables from './components/pages/Stables';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import OurTeame from './components/pages/OurTeam';
 import Adelina from './components/pages/Adelina';
+import Information from './components/pages/Information';
 
 function App() {
   return (
@@ -22,13 +22,13 @@ function App() {
       <Route path='/' exact element={<Home />} />
       <Route path='/about' element={<About />}/>
       <Route path='/out-team' element={<OurTeame />}/>
-      <Route path='/services' element={<Services />}>
+      <Route path='/services' element={<Services />}/>
       <Route path='adelina' element={<Adelina />}/>
-        </Route>
+       
       <Route path='/competitions' element={<Competitions />}/>
-      <Route path='/stables' element={<Stables />}/>
       <Route path='/contact' element={<Contact />}/>
       <Route path='/authentication' element={<Authentication />}/>
+      <Route path='/authentication/information' element={<Information />}/>
       
     </Routes>
     </Router>
