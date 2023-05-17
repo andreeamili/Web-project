@@ -1,0 +1,51 @@
+.create{
+    margin-top: 20%;
+    color: black;
+}
+.create-wrapper{
+    display: table;
+    margin: 0 auto;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    width: 60%;
+    height: 80%;
+    text-align: center;
+    box-shadow: 0 0.188em 1.550em rgb(53, 53, 53);
+}
+.create-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
+    z-index: -2;
+}
+
+.edit-form{
+margin: 15rem;;
+}
+  .create-btn {
+    width: 25%;
+    height: 1em;
+    background-color: rgb(82, 59, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 0.25em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    margin: 3% auto;
+
+}
+.create-btn-size{
+    font-size: 1.5vw;
+    color: aliceblue;
+    padding: 5px;
+    
+}

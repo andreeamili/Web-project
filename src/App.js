@@ -12,6 +12,7 @@ import Contact from './components/pages/Contact';
 import OurTeame from './components/pages/OurTeam';
 import Adelina from './components/pages/Adelina';
 import Information from './components/pages/Information';
+import Create from './components/pages/Create';
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
       <Route path='/competitions' element={<Competitions />}/>
       <Route path='/contact' element={<Contact />}/>
       <Route path='/authentication' element={<Authentication />}/>
-      <Route path='/authentication/information' element={<Information />}/>
+      <Route path='/information' element={<Information />}/>
+      <Route path='/create' element={<Create />}/>
       
     </Routes>
     </Router>

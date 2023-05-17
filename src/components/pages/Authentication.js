@@ -20,7 +20,7 @@ function Authentication() {
             <h3 className='text align-header'>Login</h3>
             <input type="text" placeholder="number" />
             <input type="password" placeholder="password" />
-            <Link to='/authentication/information' >
+            <Link to='/information' >
             <div className='login-btn text login-btn-font'>Login</div>
             </Link>
             <p className='text-forgotten'>Forgot password?</p>

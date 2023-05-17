@@ -7,7 +7,8 @@ export const Members = [
         Name: "Militaru Andreea",
         Age: "21",
         Subscription: "3",
-        Sessions: "30",
+        Remaining:"1",
+        Sessions: "0",
         Experience: "advanced",
         Horse:"Pauline"
     },
@@ -18,6 +19,7 @@ export const Members = [
         Name: "Magda Andreea",
         Age: "20",
         Subscription: "0",
+        Remaining:"0",
         Sessions: "1",
         Experience: "beginner",
         Horse:"Bambi"
@@ -29,7 +31,8 @@ export const Members = [
         Name: "Florica Maria",
         Age: "30",
         Subscription: "40",
-        Sessions: "400",
+        Remaining:"7",
+        Sessions: "4",
         Experience: "advanced",
         Horse:"Dan"
     },
@@ -40,6 +43,7 @@ export const Members = [
         Name: "Vladut Cosmin",
         Age: "22",
         Subscription: "0",
+        Remaining:"0",
         Sessions: "2",
         Experience: "beginner",
         Horse:"Ukaz"
