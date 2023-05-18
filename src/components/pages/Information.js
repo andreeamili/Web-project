@@ -1,11 +1,15 @@
+
 import React from 'react';
 import './Information.css';
 import homeImage from '../pages/pictures/contact-background.jpg';
 import Members from './Members.js';
 import { Link,useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 function Information() {
-  const member =  Members.find((item) => item.id === "2");
+  const { id } = useParams();
+
+  const member = Members.find((item) => item.id == 1);
 
     let history= useNavigate();
 
@@ -13,7 +17,7 @@ function Information() {
         const confirmation = window.confirm('Are you sure you want to delete your account?');
       
         if (confirmation) {
-          const index = Members.findIndex((e) => e.id === id);
+          const index = Members.findIndex((e) => e.id == id);
           if (index !== -1) {
             Members.splice(index, 1);
           }
@@ -22,6 +26,7 @@ function Information() {
         }
       }
   return (
+
     <div className='account'>
       <img className='account-image' src={homeImage} alt='Home Background' />
       <div className="account-wrapper">
@@ -34,6 +39,8 @@ function Information() {
         </div>
         
         <div className='name'><strong>Phone: </strong>{member.Phone}<br></br>
+        </div>
+        <div className='name'><strong>Age: </strong>{member.Age}<br></br>
         </div>
        
         <div className='name'><strong>Nr abonamente: </strong>{member.Subscription}<br></br>
@@ -50,6 +57,9 @@ function Information() {
         <div className='create-btn create-btn-size' onClick={()=>alert(member.id)}>Edit</div>
         </Link>
         <div className='create-btn create-btn-size' onClick={()=>handleDelete(member.id)}>Delete account</div>
+        <Link to='/other'>
+        <div className='create-btn create-btn-size' onClick={()=>alert(member.id)}>See others</div>
+        </Link>
       </div>
     </div> 
   );

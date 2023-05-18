@@ -100,6 +100,12 @@ input:focus {
     padding: 0px;
     text-shadow: 2px 2px 4px #fff;
 }
+
+.text-message{
+  font-size: 1.2vw;
+    color: rgb(82, 18, 18);
+    padding: 10px;
+}
 @media (max-width: 768px) {
     .align-header {
       font-size: 30px;

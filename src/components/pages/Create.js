@@ -5,23 +5,40 @@ import Members from './Members.js';
 import { Link } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import { v4 as uuid } from 'uuid';
+import { useNavigate } from 'react-router-dom';
 
 function Information() {
-    const member = Members.find((item) => item.id === "2");
-
-    const [Name, setName] = useState('');
-    const [Age, setAge] = useState('');
-    const [Phone, setPhone] = useState('');
-    const [Password, setPassword] = useState('');
+    let history= useNavigate();
+    const [name, setName] = useState('');
+    const [age, setAge] = useState('');
+    const [phone, setPhone] = useState('');
+    const [password, setPassword] = useState('');
+  
     const handleSubmit = (e) => {
-        e.preventDefault();
-        const nameValue = e.target.value;
-        setName(nameValue);
+      e.preventDefault();
+  
+      if (name && age && phone && password) {
         const ids = uuid();
         let uniqueId = ids.slice(0, 8);
-        let a = Name, b = Age, c = Password, d = Phone;
-
-        Members.push({ id: uniqueId, Name: a, Age: b, Phone: d, Password: c })
+        let a = name,
+          b = age,
+          c = password,
+          d = phone;
+  
+        Members.push({
+          id: uniqueId,
+          Name: a,
+          Age: b,
+          Phone: d,
+          Password: c,
+          Subscription: "0",
+          Remaining: "0",
+          Sessions: "0",
+          Experience: "beginner",
+          Horse: "Noane"
+        });
+        history('/information');
+      } 
 
     }
 

@@ -14,8 +14,8 @@ export const Members = [
     },
     {
         id: "2",
-        Phone: "0722245678",
-        Password: "Cai30",
+        Phone: "0",
+        Password: "0",
         Name: "Magda Andreea",
         Age: "20",
         Subscription: "0",
