@@ -1,8 +1,8 @@
 import React from "react";
 export const Members = [
     {
-        id: "1",
-        Phone: "0763213265",
+        id: 1,
+        Phone: "763213265",
         Password: "Cai20",
         Name: "Militaru Andreea",
         Age: "21",
@@ -13,7 +13,7 @@ export const Members = [
         Horse:"Pauline"
     },
     {
-        id: "2",
+        id: 2,
         Phone: "0",
         Password: "0",
         Name: "Magda Andreea",
@@ -25,7 +25,7 @@ export const Members = [
         Horse:"Bambi"
     },
     {
-        id: "3",
+        id: 3,
         Phone: "07627779483",
         Password: "Cai10",
         Name: "Florica Maria",
@@ -37,7 +37,7 @@ export const Members = [
         Horse:"Dan"
     },
     {
-        id: "4",
+        id: 4,
         Phone: "0756783940",
         Password: "Cai50",
         Name: "Vladut Cosmin",

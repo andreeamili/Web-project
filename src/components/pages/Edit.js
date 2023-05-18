@@ -4,6 +4,7 @@ import Members from "./Members";
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Edit.css'
+import Footer from "../Footer";
 
 function Edit() {
     const [name, setName] = useState('');
@@ -110,6 +111,7 @@ function Edit() {
                 </div>
 
             </div>
+            <Footer />
         </div>
     );
 }

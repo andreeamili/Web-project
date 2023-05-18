@@ -33,6 +33,8 @@ table{
    
     width: 60vh;
     height: 70vh;
+    margin-top: 15%;
+    margin-bottom: 10%;
 }
 
 input {
@@ -106,7 +108,7 @@ input:focus {
     color: rgb(82, 18, 18);
     padding: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .align-header {
       font-size: 30px;
     }
@@ -121,6 +123,13 @@ input:focus {
       }
       .create-btn-font {
         font-size: 13px;
+      }
+      .text-message{
+        font-size: 5vw;
+      }
+      .tabel-login{
+        margin-top: 25;
+    margin-bottom: 20%;
       }
       
   }

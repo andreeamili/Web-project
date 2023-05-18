@@ -5,11 +5,12 @@ import homeImage from '../pages/pictures/contact-background.jpg';
 import Members from './Members.js';
 import { Link,useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import Footer from '../Footer';
 
 function Information() {
   const { id } = useParams();
 
-  const member = Members.find((item) => item.id == 1);
+  const member = Members.find((item) => item.id == parseInt(id));
 
     let history= useNavigate();
 
@@ -61,6 +62,7 @@ function Information() {
         <div className='create-btn create-btn-size' onClick={()=>alert(member.id)}>See others</div>
         </Link>
       </div>
+      <Footer />
     </div> 
   );
 }

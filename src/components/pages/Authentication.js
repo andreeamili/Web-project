@@ -3,17 +3,10 @@ import "./Authentication.css"
 import { Link } from 'react-router-dom';
 import Members from './Members.js';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Footer';
 
 function Authentication() {
-  const searchName = 'Militaru Andreea'; // numele căutat
-
-  const member = Members.find((item) => item.Name === searchName);
-
-  let memberId = null;
-
-  if (member) {
-    memberId = member.id;
-  }
+  
   let history = useNavigate();
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
@@ -26,7 +19,7 @@ function Authentication() {
   
     if (member) {
       setLoginMessage('Login successful!'); 
-    history(`/information`);
+      history(`/information/${member.id}`);
   } else {
     setLoginMessage('Invalid password or phone number '); 
   }
@@ -50,7 +43,7 @@ function Authentication() {
         </Link>
       </table>
     </div>
-  
+    <Footer />
   </div>
   );
 }

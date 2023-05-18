@@ -2,6 +2,7 @@ import React from 'react'
 import homeImage from '../pages/pictures/Home_Fundal.jpg';
 import downImage from './pictures/horse-down.jpg'
 import './Home.css';
+import Footer from '../Footer';
 
 function Home() {
   
@@ -33,7 +34,7 @@ function Home() {
         <p className='align-down'>So don't wait any longer<br></br> and join us!</p>
 
         </div>
-       
+        <Footer />
     </div>
     </>
   );

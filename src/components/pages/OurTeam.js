@@ -9,6 +9,7 @@ import image1g from './pictures/gruia-antrenor1.jpg'
 import image2g from './pictures/gruia3.jpg'
 import image1d from './pictures/daniel-antrenor1.jpg'
 import image2d from './pictures/daniel-antrenor2.jpg'
+import Footer from '../Footer'
 
 function OurTeame() {
     return (
@@ -49,6 +50,7 @@ function OurTeame() {
                 beginners to high-performance athletes. We are proud to have such a team of professionals who bring with them 
                 experience, knowledge, and dedication to the development of equestrian sports in Romania.
                 </div>
+                <Footer />
         </div>
     );
 }

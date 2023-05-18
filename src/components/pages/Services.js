@@ -4,6 +4,7 @@ import adelinaImage from './pictures/Home_Fundal.jpg'
 import ionelImage from './pictures/ionel-bucur2.jpg'
 import danielImage from './pictures/daniel.jpg'
 import gruiaImage from './pictures/gruia3.jpg'
+import Footer from '../Footer'
 
 function Services() {
   const [hovered, setHovered] = useState(false);
@@ -139,6 +140,7 @@ function Services() {
           )}
         </p>
       </div>
+      <Footer />
     </div>
 
   );

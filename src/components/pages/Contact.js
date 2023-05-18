@@ -1,6 +1,7 @@
 import React from 'react'
 import homeImage from '../pages/pictures/contact-background.jpg';
 import './Contact.css'
+import Footer from '../Footer';
 
 function Contact() {
   return (
@@ -37,6 +38,7 @@ function Contact() {
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

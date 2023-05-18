@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import { v4 as uuid } from 'uuid';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Footer';
 
 function Information() {
     let history= useNavigate();
@@ -34,11 +35,12 @@ function Information() {
           Subscription: "0",
           Remaining: "0",
           Sessions: "0",
-          Experience: "beginner",
-          Horse: "Noane"
+          Experience: "beginner",   
+          Horse: "None"
         });
-        history('/information');
+        history('/authentication');
       } 
+      
 
     }
 
@@ -73,9 +75,10 @@ function Information() {
                     </Form.Group>
                 </Form>
                 <Link to='/information'>
-                    <div className='create-btn create-btn-size' onClick={() => handleSubmit}>Submit</div>
+                    <div className='create-btn create-btn-size' onClick={handleSubmit}>Submit</div>
                 </Link>
             </div>
+            <Footer />
         </div>
     );
 }

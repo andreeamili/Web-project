@@ -2,6 +2,7 @@ import React from "react";
 import homeImage from '../pages/pictures/contact-background.jpg';
 import Members from "./Members";
 import './Other.css'
+import Footer from "../Footer";
 
 function Other() {
     return (
@@ -45,6 +46,7 @@ function Other() {
                         "No data"
                 }
             </div>
+            <Footer />
         </div>
     );
 }
