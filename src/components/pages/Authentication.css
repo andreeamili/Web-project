@@ -1,194 +1,202 @@
-.authentication{
-    background-image: url('./pictures/horse-background.jpg');
+.authentication {
+  background-image: url('./pictures/horse-background.jpg');
   background-size: cover;
   background-position: top 100px;
   background-size: auto;
   background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 10%;
-    box-sizing: border-box;
-    font-family: "CustomFont";
-    margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10%;
+  box-sizing: border-box;
+  font-family: "CustomFont";
+  margin: 0;
 }
 
-.authentication *{
-    
-}
 @font-face {
-    font-family: "CustomFont";
-    src: url('../pages/fonts/RolexLight.woff2');
-}
-table{
-    margin: 0 auto;
-    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
-    border-radius: 1em;
-    text-align: center;
-    z-index: 2;
+  font-family: "CustomFont";
+  src: url('../pages/fonts/RolexLight.woff2');
 }
 
-.tabel-login{
-   
-    width: 60vh;
-    height: 70vh;
-    margin-top: 15%;
-    margin-bottom: 10%;
+table {
+  margin: 0 auto;
+  box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+  border-radius: 1em;
+  text-align: center;
+  z-index: 2;
+}
+
+.tabel-login {
+  width: 60vh;
+  height: 70vh;
+  margin-top: 50%;
+  margin-bottom: 10%;
 }
 
 input {
-    border: none;
-    background-color: rgb(247, 240, 240);
-    width: 70%;
-    border-radius: 0.25em;
-    text-align: center;
-    padding: 0.1em;
-    font-size: 0.4em;
-    box-sizing: border-box;
-    font-family: "CustomFont";
-    margin: 0;
+  border: none;
+  background-color: rgb(247, 240, 240);
+  width: 70%;
+  border-radius: 0.25em;
+  text-align: center;
+  padding: 0.1em;
+  font-size: 1vw;
+  box-sizing: border-box;
+  font-family: "CustomFont";
+  margin: 0;
 }
 
 input:focus {
-    outline-color: rgb(24, 27, 25);
+  outline-color: rgb(24, 27, 25);
 }
+
 .login-btn {
-    width: 35%;
-    height: 1em;
-    background-color: rgb(82, 59, 23);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    border-radius: 0.25em;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    margin: 30px auto;
+  width: 35%;
+  height: 1em;
+  background-color: rgb(82, 59, 23);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 0.25em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
 }
-.login-btn-font{
-    font-size: 1vw;
-    color: aliceblue;
-    padding: 10px;
-} 
+
+.login-btn-font {
+  font-size: 1vw;
+  color: aliceblue;
+  padding:
+10px;
+}
+
 .create-btn {
-    width: 25%;
-    height: 1em;
-    background-color: rgb(82, 59, 23);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    border-radius: 0.25em;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    margin: 5px auto;
+width: 25%;
+height: 1em;
+background-color: rgb(82, 59, 23);
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.5s;
+border-radius: 0.25em;
+cursor: pointer;
+display: flex;
+justify-content: space-around;
+margin: 5px auto;
 }
 
-.create-btn-font{
-    font-size: 1vw;
-    color: aliceblue;
-    padding: 10px;
+.create-btn-font {
+font-size: 1vw;
+color: aliceblue;
+padding: 10px;
 }
 
-.align-header{
-    padding: 50px;
-    text-shadow: 4px 4px 4px #663300;
-    box-sizing: border-box;
-    font-family: "CustomFont";
-    margin: 0;
+.align-header {
+padding: 50px;
+text-shadow: 4px 4px 4px #663300;
+box-sizing: border-box;
+font-family: "CustomFont";
+margin: 0;
 }
 
-.text-forgotten{
-   padding-bottom: 20px;
-   box-sizing: border-box;
-    font-family: "CustomFont";
-    margin: 0;
-}
-.text-create{
-    padding: 0px;
-    text-shadow: 2px 2px 4px #fff;
-    box-sizing: border-box;
-    font-family: "CustomFont";
-    margin: 0;
+.text-forgotten {
+padding-bottom: 20px;
+box-sizing: border-box;
+font-family: "CustomFont";
+margin: 0;
 }
 
-.text-message{
-  font-size: 1.2vw;
-    color: rgb(82, 18, 18);
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: "CustomFont";
-    margin: 0;
+.text-create {
+padding: 0px;
+text-shadow: 2px 2px 4px #fff;
+box-sizing: border-box;
+font-family: "CustomFont";
+margin: 0;
 }
+
+.text-message {
+font-size: 1.2vw;
+color: rgb(82, 18, 18);
+padding: 10px;
+box-sizing: border-box;
+font-family: "CustomFont";
+margin: 0;
+}
+
 @media (max-width: 850px) {
-    .align-header {
-      font-size: 30px;
-    }
-    .login-btn-font {
-        font-size: 20px;
-      }
-      .text-forgotten {
-        font-size: 10px;
-      }
-      .text-create{
-        font-size: 10px;
-      }
-      .create-btn-font {
-        font-size: 13px;
-      }
-      .text-message{
-        font-size: 5vw;
-      }
-      .tabel-login{
-        margin-top: 25;
-    margin-bottom: 20%;
-      }
-      
-  }
-  
-  @media (min-width: 576px) {
-    .align-header {
-      font-size: 30px;
-    }
-    .login-btn-font {
-        font-size: 20px;
-      }
-      .text-forgotten {
-        font-size: 10px;
-      }
-      .text-create {
-        font-size: 10px;
-      }
-      .create-btn-font {
-        font-size: 13px;
-      }
-      
-  }
-.login-btn:hover { transform: scale(1.25);}
-.create-btn:hover { transform: scale(1.25);}
+.align-header {
+font-size: 30px;
+}
+.login-btn-font {
+font-size: 20px;
+}
+.text-forgotten {
+font-size: 10px;
+}
+.text-create {
+font-size: 10px;
+}
+.create-btn-font {
+font-size: 13px;
+}
+.text-message {
+font-size: 5vw;
+}
+.tabel-login {
+margin-top: 25;
+margin-bottom: 20%;
+}
+}
+
+@media (max-width: 576px) {
+.align-header {
+font-size: 30px;
+}
+.login-btn-font {
+font-size: 20px;
+}
+.text-forgotten {
+font-size: 10px;
+}
+.text-create {
+font-size: 10px;
+}
+.create-btn-font {
+font-size: 13px;
+}
+}
+
+.login-btn:hover {
+transform: scale(1.25);
+}
+
+.create-btn:hover {
+transform: scale(1.25);
+}
 
 @media screen and (max-width: 768px) {
-    .tabel-login {
-        width: 80vw;
-        height: auto;
-    }
-    input {
-      width: 80%;
-    }
-    .authentication{
-      background-position: center;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .tabel-login {
-        width: 90vw;
-        height: auto;
-    }
-    .authentication{
-      background-position: top 100px;
-    }
-  }
+.tabel-login {
+width: 80vw;
+height: auto;
+}
+input {
+width: 80%;
+}
+.authentication {
+background-position: center;
+}
+}
+
+@media screen and (max-width: 576px) {
+.tabel-login {
+width: 90vw;
+height: auto;
+}
+.authentication {
+background-position: top 100px;
+}
+}
