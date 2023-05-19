@@ -107,7 +107,7 @@ function Edit() {
                     </Form.Group>
                 </Form>
                 
-                    <Button onClick={handleSubmit}>Update</Button>
+                <div className='create-btn create-btn-font'onClick={handleSubmit}>Update</div>
                 </div>
 
             </div>

@@ -24,7 +24,7 @@ function App() {
     <Routes>
       <Route path='/' exact element={<Home />} />
       <Route path='/about' element={<About />}/>
-      <Route path='/out-team' element={<OurTeame />}/>
+      <Route path='/our-team' element={<OurTeame />}/>
       <Route path='/services' element={<Services />}/>
       <Route path='adelina' element={<Adelina />}/>
       <Route path='/competitions' element={<Competitions />}/>
@@ -36,6 +36,7 @@ function App() {
       <Route path='/other' element={<Other />}/>
     </Routes>
     </Router>
+    
     </>
   );
 }

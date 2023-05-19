@@ -26,6 +26,7 @@
     height: 80%;
     text-align: center;
     box-shadow: 0 0.188em 1.550em rgb(53, 53, 53);
+    margin-bottom: 5%;
 }
 
 @media (max-width: 768px) {

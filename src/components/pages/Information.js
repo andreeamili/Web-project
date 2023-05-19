@@ -55,11 +55,11 @@ function Information() {
         <div className='name'> <strong>Nivel de experienta: </strong>{member.Experience}<br></br>
         </div>
        <Link to='/edit'>
-        <div className='create-btn create-btn-size' onClick={()=>alert(member.id)}>Edit</div>
+        <div className='create-btn create-btn-size'>Edit</div>
         </Link>
         <div className='create-btn create-btn-size' onClick={()=>handleDelete(member.id)}>Delete account</div>
         <Link to='/other'>
-        <div className='create-btn create-btn-size' onClick={()=>alert(member.id)}>See others</div>
+        <div className='create-btn create-btn-size' >See others</div>
         </Link>
       </div>
       <Footer />

@@ -1,7 +1,6 @@
 .other-container{
     margin-top: 10%;
     color: black;
-    margin-bottom: 5%;
 }
 .other-image{
     position: absolute;
@@ -18,7 +17,7 @@
 
 
 .other-wrapper{
-    display: table;
+ display: table;
     margin: 0 auto;
     z-index: 1;
     background-color: rgb(255, 255, 255);
@@ -26,4 +25,5 @@
     height: 80%;
     text-align: center;
     box-shadow: 0 0.188em 1.550em rgb(53, 53, 53);
+    margin-bottom: 5%;
 }

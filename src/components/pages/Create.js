@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Information.css';
+import './Create.css';
 import homeImage from '../pages/pictures/contact-background.jpg';
 import Members from './Members.js';
 import { Link } from 'react-router-dom';
@@ -46,8 +46,8 @@ function Information() {
 
     return (
         <div className='account'>
-            <img className='account-image' src={homeImage} alt='Home Background' />
-            <div className="account-wrapper">
+            <img className='create-image' src={homeImage} alt='Home Background' />
+            <div className="create-wrapper">
                 <div className='text-header'>Create your account
                 </div>
                 <Form className='edit-form'>

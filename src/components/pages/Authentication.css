@@ -10,12 +10,13 @@
     align-items: center;
     justify-content: space-around;
     padding-top: 10%;
-}
-
-.authentication *{
     box-sizing: border-box;
     font-family: "CustomFont";
     margin: 0;
+}
+
+.authentication *{
+    
 }
 @font-face {
     font-family: "CustomFont";
@@ -45,6 +46,9 @@ input {
     text-align: center;
     padding: 0.1em;
     font-size: 0.4em;
+    box-sizing: border-box;
+    font-family: "CustomFont";
+    margin: 0;
 }
 
 input:focus {
@@ -93,20 +97,32 @@ input:focus {
 .align-header{
     padding: 50px;
     text-shadow: 4px 4px 4px #663300;
+    box-sizing: border-box;
+    font-family: "CustomFont";
+    margin: 0;
 }
 
 .text-forgotten{
    padding-bottom: 20px;
+   box-sizing: border-box;
+    font-family: "CustomFont";
+    margin: 0;
 }
 .text-create{
     padding: 0px;
     text-shadow: 2px 2px 4px #fff;
+    box-sizing: border-box;
+    font-family: "CustomFont";
+    margin: 0;
 }
 
 .text-message{
   font-size: 1.2vw;
     color: rgb(82, 18, 18);
     padding: 10px;
+    box-sizing: border-box;
+    font-family: "CustomFont";
+    margin: 0;
 }
 @media (max-width: 850px) {
     .align-header {

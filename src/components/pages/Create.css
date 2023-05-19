@@ -11,6 +11,7 @@
     height: 80%;
     text-align: center;
     box-shadow: 0 0.188em 1.550em rgb(53, 53, 53);
+    margin-bottom: 10%;
 }
 .create-image{
     position: absolute;
@@ -26,8 +27,8 @@
 }
 
 .edit-form{
-margin: 15rem;;
-}
+    height: 50%;
+    }
   .create-btn {
     width: 25%;
     height: 1em;

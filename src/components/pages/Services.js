@@ -140,7 +140,7 @@ function Services() {
           )}
         </p>
       </div>
-      <Footer />
+      <Footer/>
     </div>
 
   );

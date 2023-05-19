@@ -18,7 +18,7 @@ export const SidebarData=[
     },
     {
         title: 'Our Team',
-        path:'/out-team',
+        path:'/our-team',
         icon: <AiIcons.AiOutlineTeam/>,
         cName: 'nav-text' 
     },
@@ -41,7 +41,7 @@ export const SidebarData=[
         cName: 'nav-text'
     },
     {
-        title: 'Authentication',
+        title: 'My account',
         path:'/authentication',
         icon: <AiIcons.AiOutlineUserAdd />,
         cName: 'nav-text'
