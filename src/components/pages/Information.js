@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import './Information.css';
 import homeImage from '../pages/pictures/contact-background.jpg';
@@ -37,10 +36,10 @@ function Information() {
       };
 
       getUsersList();
-  }, []);
+  },[]);
   console.log(usersList )
   console.log(" ce e in lista")
-  const member = Members.find((item) => item.id === 1);
+  const member = usersList.find((user) => user.id === id);
   console.log(usersList);
   console.log("ceva")
 
@@ -75,11 +74,14 @@ function Information() {
         </div>
         <div className='information-account'>Account informations
         </div>
-        <div className='name-information'><strong>Name: </strong>{member.Name}<br></br>
+        
+        {usersList.length > 0 && (
+          <>
+        <div className='name-information'><strong>Name: </strong>{member.Name.name}<br></br>
         </div>
-        <div className='name-information'><strong>Phone: </strong>{member.Phone}<br></br>
+        <div className='name-information'><strong>Phone: </strong>{member.Phone.phone}<br></br>
         </div>
-        <div className='name-information'><strong>Age: </strong>{member.Age}<br></br>
+        <div className='name-information'><strong>Age: </strong>{member.Age.age}<br></br>
         </div>
         <div className='name-information'><strong>Nr abonamente: </strong>{member.Subscription}<br></br>
         </div> 
@@ -91,6 +93,7 @@ function Information() {
         </div>
         <div className='name-information'> <strong>Nivel de experienta: </strong>{member.Experience}<br></br>
         </div>
+        </>)}
        <Link to='/edit'>
         <div className='create-btn-info create-btn-info'>Edit</div>
         </Link>
