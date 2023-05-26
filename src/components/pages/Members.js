@@ -2,6 +2,7 @@ import React from "react";
 export const Members = [
     {
         id: 1,
+        Email:"andreea.mili20@gmail.com",
         Phone: "763213265",
         Password: "Cai20",
         Name: "Militaru Andreea",
@@ -14,6 +15,7 @@ export const Members = [
     },
     {
         id: 2,
+        Email:"123@yahoo.com",
         Phone: "0",
         Password: "0",
         Name: "Magda Andreea",
@@ -26,6 +28,7 @@ export const Members = [
     },
     {
         id: 3,
+        Email:"123@yahoo.com",
         Phone: "07627779483",
         Password: "Cai10",
         Name: "Florica Maria",
@@ -38,6 +41,7 @@ export const Members = [
     },
     {
         id: 4,
+        Email:"123@yahoo.com",
         Phone: "0756783940",
         Password: "Cai50",
         Name: "Vladut Cosmin",

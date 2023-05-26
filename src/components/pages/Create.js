@@ -1,85 +1,116 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './Create.css';
 import homeImage from '../pages/pictures/contact-background.jpg';
-import Members from './Members.js';
-import { Link } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
-import { v4 as uuid } from 'uuid';
+import Loader from './Loader'
 import { useNavigate } from 'react-router-dom';
 import Footer from '../Footer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { db } from "../../firebase/config";
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth, createUserDocument } from '../../firebase/config'
+import { addDoc } from 'firebase/firestore';
+import { collection, getDocs } from "firebase/firestore";
+
 
 function Information() {
-    let history= useNavigate();
+    let history = useNavigate();
     const [name, setName] = useState('');
-    const [age, setAge] = useState('');
-    const [phone, setPhone] = useState('');
+    const [age, setAge] = useState(0);
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState(0);
     const [password, setPassword] = useState('');
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-  
-      if (name && age && phone && password) {
-        const ids = uuid();
-        let uniqueId = ids.slice(0, 8);
-        let a = name,
-          b = age,
-          c = password,
-          d = phone;
-  
-        Members.push({
-          id: uniqueId,
-          Name: a,
-          Age: b,
-          Phone: d,
-          Password: c,
-          Subscription: "0",
-          Remaining: "0",
-          Sessions: "0",
-          Experience: "beginner",   
-          Horse: "None"
-        });
-        history('/authentication');
-      } 
-      
+    const [cpassword, setCPassword] = useState('');
+    const [userBase, setUserBase] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const usersCollectionRef = collection(db, 'users')
+    
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+    const handleSubmit = async (e) => {
+
+        if (password !== cpassword) {
+            toast.error("Password do not match.")
+        }
+        const isValidEmail = validateEmail(email);
+        if (!isValidEmail) {
+            toast.error('Email invalid');
+        }
+        setIsLoading(true);
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                createUserDocument(user,{name},{age},{phone});
+                console.log(user)
+                setIsLoading(false)
+                toast.success("Registration Successful...")
+                history(`/authentication`)
+            })
+            .catch((error) => {
+                toast.error(error.message)
+                setIsLoading(false)
+            });
+             
 
     }
 
     return (
-        <div className='account'>
-            <img className='create-image' src={homeImage} alt='Home Background' />
-            <div className="create-wrapper">
-                <div className='text-header'>Create your account
+        <>
+            {isLoading && <Loader />}
+            <div className='create'>
+                <img className='create-image' src={homeImage} alt='Home Background' />
+                <div className="create-wrapper">
+                    <div className='text-header-create'>Create your account
+                    </div>
+                    <div className='margin text-create'>Name</div>
+                    <Form className='edit-form'>
+                        <Form.Group className='mb-3' controlId='formName'>
+                            <Form.Control className='form-edit-create' type='text' placeholder='Enter name' required value={name} onChange={(e) => setName(e.target.value)}>
+                            </Form.Control>
+                        </Form.Group>
+                    </Form>
+                    <div className='margin text-create'>Email</div>
+                    <Form className='edit-form'>
+                        <Form.Group className='mb-3' controlId='formName'>
+                            <Form.Control className='form-edit-create' type='text' placeholder='Enter email' required value={email} onChange={(e) => setEmail(e.target.value)}>
+                            </Form.Control>
+                        </Form.Group>
+                    </Form>
+                    <div className='margin text-create'>Phone number</div>
+                    <Form className='edit-form'>
+                        <Form.Group className='mb-3' controlId='formName'>
+                            <Form.Control className='form-edit-create' type='number' placeholder='Enter phone' required value={phone} onChange={(e) => setPhone(e.target.value)}>
+                            </Form.Control>
+                        </Form.Group>
+                    </Form>
+                    <div className='margin text-create'>Age</div>
+                    <Form className='edit-form'>
+                        <Form.Group className='mb-3' controlId='formName'>
+                            <Form.Control className='form-edit-create' type='number' placeholder='Enter age' required value={age} onChange={(e) => setAge(e.target.value)}>
+                            </Form.Control>
+                        </Form.Group>
+                    </Form>
+                    <div className='margin text-create'>Password</div>
+                    <Form className='edit-form'>
+                        <Form.Group className='mb-3' controlId='formName'>
+                            <Form.Control className='form-edit-create' type='password' placeholder='Enter password' required value={password} onChange={(e) => setPassword(e.target.value)}>
+                            </Form.Control>
+                        </Form.Group>
+                    </Form>
+                    <div className='margin text-create'>Confirm password</div>
+                    <Form className='edit-form'>
+                        <Form.Group className='mb-3' controlId='formName'>
+                            <Form.Control className='form-edit-create' type='password' placeholder='Enter password again' required value={cpassword} onChange={(e) => setCPassword(e.target.value)}>
+                            </Form.Control>
+                        </Form.Group>
+                    </Form>
+                    <div className='create-btn-c create-btn-size-c margin' onClick={handleSubmit}>Submit</div>
                 </div>
-                <Form className='edit-form'>
-                    <Form.Group className='mb-3' controlId='formName'>
-                        <Form.Control type='text' placeholder='Enter name' required onChange={(e) => setName(e.target.value)}>
-                        </Form.Control>
-                    </Form.Group>
-                </Form>
-                <Form className='edit-form'>
-                    <Form.Group className='mb-3' controlId='formName'>
-                        <Form.Control type='number' placeholder='Enter phone' required onChange={(e) => setPhone(e.target.value)}>
-                        </Form.Control>
-                    </Form.Group>
-                </Form>
-                <Form className='edit-form'>
-                    <Form.Group className='mb-3' controlId='formName'>
-                        <Form.Control type='number' placeholder='Enter age' required onChange={(e) => setAge(e.target.value)}>
-                        </Form.Control>
-                    </Form.Group>
-                </Form>
-                <Form className='edit-form'>
-                    <Form.Group className='mb-3' controlId='formName'>
-                        <Form.Control type='password' placeholder='Enter password' required onChange={(e) => setPassword(e.target.value)}>
-                        </Form.Control>
-                    </Form.Group>
-                </Form>
-                <Link to='/information'>
-                    <div className='create-btn create-btn-size' onClick={handleSubmit}>Submit</div>
-                </Link>
             </div>
-            <Footer />
-        </div>
+        </>
     );
 }
 

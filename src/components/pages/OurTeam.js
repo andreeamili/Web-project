@@ -50,7 +50,6 @@ function OurTeame() {
                 beginners to high-performance athletes. We are proud to have such a team of professionals who bring with them 
                 experience, knowledge, and dedication to the development of equestrian sports in Romania.
                 </div>
-                <Footer />
         </div>
     );
 }

@@ -34,7 +34,7 @@ function Home() {
         <p className='align-down'>So don't wait any longer<br></br> and join us!</p>
 
         </div>
-        <Footer />
+        
     </div>
     </>
   );

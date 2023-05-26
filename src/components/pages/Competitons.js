@@ -37,7 +37,6 @@ function Competitions() {
      country.
     </div>
     <SlideShow />
-    <Footer/>
     </div>
   );
 }

@@ -39,12 +39,6 @@ export const SidebarData=[
         path:'/contact',
         icon: <AiIcons.AiFillPhone />,
         cName: 'nav-text'
-    },
-    {
-        title: 'My account',
-        path:'/authentication',
-        icon: <AiIcons.AiOutlineUserAdd />,
-        cName: 'nav-text'
     }
 
 ]

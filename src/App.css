@@ -8,9 +8,6 @@
 }
 
 .home, .about_us,.our-team, .services, .competitions, .competitions, .contact, .authentication {
-  
-  height: 90vh;
   align-items: center;
   justify-content: center;
- 
 }

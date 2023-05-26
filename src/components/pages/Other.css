@@ -14,7 +14,15 @@
     box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
     z-index: -2;
 }
-
+.others-information{
+    text-align: center;
+    padding-left: 5%;
+    font-family: "Arial",sans-serif;
+    padding-bottom: 2%;
+    padding-top: 5%;
+    letter-spacing: 0.2em;
+    font-size: 2.5em;
+}
 
 .other-wrapper{
  display: table;
@@ -26,4 +34,30 @@
     text-align: center;
     box-shadow: 0 0.188em 1.550em rgb(53, 53, 53);
     margin-bottom: 5%;
+}
+.text-header-others{
+    padding-top: 5%;
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 0.2em;
+    font-size: 2.8em;
+    
+  }
+  .name-others{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+  }
+
+@media (min-width: 206px) and (max-width: 768px) {
+    .text-header-others {
+        font-size: 1.2em;
+    }
+    .others-information {
+        font-size: 1em;
+      }
+      .name-others{
+        font-size: 20px;
+      }
+    .other-wrapper{
+        margin-top: 30%;
+    }
 }

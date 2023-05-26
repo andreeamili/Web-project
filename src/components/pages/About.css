@@ -30,7 +30,7 @@
 }
 @font-face {
   font-family: "CustomFont";
-  src: url('../pages/fonts/RolexLight.woff2');
+  src: url('./fonts/RolexLight.woff2');
 }
 .align{
   padding-top: 4%;
