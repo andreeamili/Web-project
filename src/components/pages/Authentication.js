@@ -6,6 +6,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase/config';
 import { toast } from 'react-toastify';
 import Loader from './Loader';
+import Footer from '../Footer';
 
 function Authentication() {
   
@@ -56,6 +57,7 @@ function Authentication() {
       </table>
     </div>
   </div>
+  <Footer/>
   </>
   );
 }

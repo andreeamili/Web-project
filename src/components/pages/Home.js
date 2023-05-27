@@ -32,8 +32,14 @@ function Home() {
         <p className='align-down'>So don't wait any longer<br></br> and join us!</p>
 
         </div>
-        
     </div>
+    <div className="home-footer">
+        <h3 className="top-home">Contact</h3>
+        <p>Adress: Strada Semaforului 11, Sibiu</p>
+        <p>Phone: 0749.222.222 / 0742.222.222</p>
+        <p>Email:  EquestrianCSM@yahoo.com</p>
+        <p className="down-home">&copy; 2023 Csm Sibiu Equestrian Baze. All the rights are reserved.</p>
+      </div>
     </>
   );
 }

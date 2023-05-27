@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router ,Routes, Route } from 'react-router-dom';
@@ -16,7 +15,6 @@ import Edit from './components/pages/Edit';
 import Other from './components/pages/Other';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Footer from './components/Footer';
 
 function App() {
   return (
@@ -24,7 +22,7 @@ function App() {
     <Router>
     <ToastContainer/>
     <Navbar/>
-    <div>
+    
     <Routes>
       <Route path='/' exact element={<Home />} />
       <Route path='/about' element={<About />}/>
@@ -38,10 +36,6 @@ function App() {
       <Route path='/edit/:id' element={<Edit />}/>
       <Route path='/other' element={<Other />}/>
     </Routes>
-      </div>
-    
-    <Footer/>
-    
     </Router>
     
     </>

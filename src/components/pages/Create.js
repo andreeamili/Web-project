@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth, createUserDocument } from '../../firebase/config'
+import Footer from '../Footer';
 
 
 function Information() {
@@ -120,6 +121,7 @@ function Information() {
                     <div className='create-btn-c create-btn-size-c margin' onClick={handleSubmit}>Submit</div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

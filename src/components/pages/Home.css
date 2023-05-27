@@ -47,12 +47,27 @@
     padding-top: 10%;
     padding-bottom: 20%;
   }
+  .home-footer{
+    text-align: center;
+    width: 100%;
+    font-size: 1,5em;
+   color: #ffffff;
+   background-color:rgb(0, 0, 0) ;
+  }
+  .top-home{
+  padding-top: 3%;
+  }
+  .down-home{
+  padding-bottom: 3%;
+  }
   
   @media (min-width: 501px) and (max-width: 800px) {
     .text-align {
       margin-top: 40%;
       font-size: 2.5vh;
-
+    }
+    .home-footer{
+      font-size: 1vh;
     }
   }
   @media (min-width: 350px) and (max-width: 500px) {

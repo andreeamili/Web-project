@@ -4,13 +4,13 @@
 }
 .contact-image{
     position: absolute;
-    top: 0;
+    margin-top: 0%;
     left: 0;
     right: 0;
     max-width: 1600px;
     width: 100%;
     height: auto;
-    max-height: 500v;
+    max-height: 70%;
   
   }
 
@@ -22,9 +22,9 @@
     position: absolute;
   }
   .contact{
-    background-Color: rgb(223, 230, 225);
+    background-Color: rgb(214, 214, 214);
     position: absolute;
-    top: 80px;
+    top: 20%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -74,6 +74,20 @@
     padding: 20px;
     
 }
+.contact-footer{
+  text-align: center;
+  width: 100%;
+  font-size: 1,5em;
+ color: #000000;
+ background-color:rgb(202, 202, 202) ;
+}
+.top-contact{
+padding-top: 3%;
+}
+.down-contact{
+padding-bottom: 3%;
+}
+
 
   @media (max-width: 768px) {
     .text-header {
@@ -90,6 +104,9 @@
       }
       .table-wrapper{
         height: 500px;
+      }
+      .contact-footer{
+        font-size: 1vh;
       }
       
 }

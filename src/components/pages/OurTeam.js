@@ -9,9 +9,11 @@ import image1g from './pictures/gruia-antrenor1.jpg'
 import image2g from './pictures/gruia3.jpg'
 import image1d from './pictures/daniel-antrenor1.jpg'
 import image2d from './pictures/daniel-antrenor2.jpg'
+import Footer from '../Footer'
 
 function OurTeame() {
     return (
+        <>
         <div className='our-team'>
             <img className='team-image' src={teamImage} alt='Team image' />
             <div className='text-team'>Our Team</div>
@@ -50,6 +52,8 @@ function OurTeame() {
                 experience, knowledge, and dedication to the development of equestrian sports in Romania.
                 </div>
         </div>
+        <Footer/>
+        </>
     );
 }
 

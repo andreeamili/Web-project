@@ -3,6 +3,7 @@ import homeImage from '../pages/pictures/contact-background.jpg';
 import './Other.css'
 import { db } from "../../firebase/config";
 import { collection, getDocs } from "firebase/firestore";
+import Footer from "../Footer";
 
 function Other() {
     const [usersList, setUsersList] = useState([]);
@@ -32,6 +33,7 @@ function Other() {
     console.log("others")
 
     return (
+        <>
         <div className="other-container">
             <img className='other-image' src={homeImage} alt='Home Background' />
             <div className="other-wrapper">
@@ -60,6 +62,8 @@ function Other() {
                 }
             </div>
         </div>
+        <Footer/>
+        </>
     );
 }
 

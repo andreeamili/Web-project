@@ -6,6 +6,7 @@ import Sara from './pictures/Sara.jpg'
 import Rozi from './pictures/Rozi.jpg'
 import Bacardi from './pictures/Bacardi.jpg'
 import Pauline from './pictures/Pauline.jpg'
+import Footer from '../Footer'
 
 function About() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -19,6 +20,7 @@ function About() {
   }, []);
 
   return (
+    <>
     <div className='about'>
       <img className='about-us-image' src={aboutUsImage} alt='Home Background' />
       <div className='text-about'>About us</div>
@@ -47,9 +49,9 @@ function About() {
                 <img className='image2 new-margin2 blur-image' src={Rozi} alt='antrenor' />
                 <img className='image2 new-margin2 blur-image' src={Pauline} alt='antrenor' />
         </div>
-       
     </div>
-
+    <Footer/>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ const Footer = () => {
     return (
       <div>
         <div className="footer-content">
-          <div className="contact-info">
+          <div className="info">
             <h3 className="top">Contact</h3>
             <p>Adress: Strada Semaforului 11, Sibiu</p>
             <p>Phone: 0749.222.222 / 0742.222.222</p>

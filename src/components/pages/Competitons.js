@@ -2,9 +2,11 @@ import React from 'react'
 import Video from '../Video';
 import './Competitions.css'
 import SlideShow from '../SlideShow';
+import Footer from '../Footer';
  
 function Competitions() {
   return (
+    <>
     <div className='competitions'>
       <Video />
       <div className='text-competitions'>Our Performences</div>
@@ -37,6 +39,8 @@ function Competitions() {
     </div>
     <SlideShow />
     </div>
+    <Footer/>
+    </>
   );
 }
 

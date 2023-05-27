@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import { auth } from '../../firebase/config';
 import { db } from "../../firebase/config";
 import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import Footer from '../Footer';
 
 function Information() {
   const { id } = useParams();
@@ -65,12 +66,13 @@ function Information() {
     });
   }
   return (
+    <>
     <div className='infomrations'>
       <img className='infomration-image' src={homeImage} alt='Home Background' />
       <div className="information-wrapper">
         <div className='text-header-information'>Your account
         </div>
-        <div className='information-account'>Account informations
+        <div className='information-account'>Account soareciiiiiii
         </div>
 
         {usersList.length > 0 && (
@@ -98,6 +100,8 @@ function Information() {
         <div className='create-btn-info create-btn-info' onClick={() => handleDelete(member.id)}>Delete account</div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

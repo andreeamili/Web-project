@@ -6,6 +6,7 @@ import './Edit.css'
 import { db } from "../../firebase/config";
 import { doc,  updateDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
+import Footer from "../Footer";
 
 function Edit() {
     const { id } = useParams();
@@ -86,6 +87,7 @@ function Edit() {
         
         }
     return (
+        <>
         <div className="edit-container">
             <img className='edit-image' src={homeImage} alt='Home Background' />
             <div className="edit-wrapper">
@@ -140,6 +142,8 @@ function Edit() {
 
             </div>
         </div>
+        <Footer/>
+        </>
     );
 }
 export default Edit

@@ -1,13 +1,13 @@
 
   
   .footer-content {
-    position: relative;
+   
     justify-content: space-between;
     align-items: flex-start;
     background-color:rgb(202, 202, 202);
     
   }
-  .contact-info{
+  .info{
     text-align: center;
     font-size: 1,5em;
    color: #000000;
@@ -21,8 +21,8 @@
 }
 
 @media (min-width: 106px) and (max-width: 768px) {
-  .contact-info{
-    font-size: 1.3vh;
+  .info{
+    font-size: 1vh;
   }
   
 }
