@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Information.css';
 import homeImage from '../pages/pictures/contact-background.jpg';
-import Members from './Members.js';
 import { Link,useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import Footer from '../Footer';
-import { getAuth, signOut } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import { toast } from 'react-toastify';
 import { auth } from '../../firebase/config';
 import { db } from "../../firebase/config";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 
 function Information() {
   const { id } = useParams();
@@ -27,8 +25,6 @@ function Information() {
                   id: doc.id
               }));
               setUsersList(filteredData);
-              console.log(filteredData )
-              console.log("ce e in baza ")
           }
           catch (err) {
               console.error(err);
@@ -37,23 +33,16 @@ function Information() {
 
       getUsersList();
   },[]);
-  console.log(usersList )
-  console.log(" ce e in lista")
   const member = usersList.find((user) => user.id === id);
-  console.log(usersList);
-  console.log("ceva")
 
     let history= useNavigate();
 
-    const handleDelete = (id) => {
+    const handleDelete = async(id) => {
         const confirmation = window.confirm('Are you sure you want to delete your account?');
       
         if (confirmation) {
-          const index = member.findIndex((e) => e.id === id);
-          if (index !== -1) {
-            member.splice(index, 1);
-          }
-      
+          const userDoc= doc(db,'users',id);
+          await deleteDoc(userDoc);
           history('/authentication');
         }
       }
@@ -87,15 +76,13 @@ const handlEdit = ()=>{
         </div>
         <div className='name-information'><strong>Age: </strong>{member.Age.age}<br></br>
         </div>
-        <div className='name-information'><strong>Nr abonamente: </strong>{member.Subscription}<br></br>
+        <div className='name-information'><strong>Subscriptions: </strong>{member.Subscription}<br></br>
         </div> 
-        <div className='name-information'><strong>Nr sedinte ramase: </strong> {member.Remaining}<br></br>
+        <div className='name-information'><strong>Sessions left: </strong> {member.Remaining}<br></br>
         </div>
-        <div className='name-information'> <strong>Sedinte fara abonament: </strong>{member.Sessions}<br></br>
+        <div className='name-information'> <strong>Favorite horse: </strong>{member.Horse}<br></br>
         </div>
-        <div className='name-information'> <strong>Cal preferat: </strong>{member.Horse}<br></br>
-        </div>
-        <div className='name-information'> <strong>Nivel de experienta: </strong>{member.Experience}<br></br>
+        <div className='name-information'> <strong>Experience level: </strong>{member.Experience}<br></br>
         </div>
         </>)}
         <div onClick={()=>handlEdit(member.id)} className='create-btn-info create-btn-info'>Edit</div>
