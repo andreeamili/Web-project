@@ -7,7 +7,8 @@ import { SidebarData } from './SideBarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { auth } from '../firebase/config';
+import { auth, db } from '../firebase/config';
+import { collection, getDocs } from 'firebase/firestore';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -27,6 +28,28 @@ function Navbar() {
       }
     });
   },[])
+  const [usersList, setUsersList] = useState([]);
+  const usersCollectionRef = collection(db, 'users')
+  useEffect(() => {
+      const getUsersList = async () => {
+          try {
+              const data = await getDocs(usersCollectionRef);
+              const filteredData = data.docs.map((doc) => ({
+                  ...doc.data(),
+                  id: doc.id
+              }));
+              setUsersList(filteredData);
+              console.log(filteredData )
+              console.log("ce e in baza ")
+          }
+          catch (err) {
+              console.error(err);
+          }
+      };
+
+      getUsersList();
+  },[]);
+  const user = usersList.find((user) => user.id === id);
   console.log(id)
   return (
     <>
@@ -66,10 +89,16 @@ function Navbar() {
 
             <li hey="6" className="nav-text">
               {userName !== "cacaca" ?(
+                <>
+                {usersList.length > 0 && (
+                  <>
                 <Link  to={`/information/${id}`}>
                   <AiIcons.AiOutlineUserAdd />
-                  <span>Hi, {userName} </span>
+                  <span>Hi, {user.Name.name} </span>
                 </Link>
+                </>
+              )}
+            </>
               ):(
                 <Link to="/authentication">
                   <AiIcons.AiOutlineUserAdd />

@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import homeImage from '../pages/pictures/contact-background.jpg';
 import Members from "./Members";
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './Edit.css'
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 function Edit() {
+    const { id } = useParams();
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [id, setId] = useState(localStorage.getItem("id"));
     const [subscription, setSubscription] = useState('');
     const [remaining, setRemaining] = useState('');
     const [sessions, setSessions] = useState('')
@@ -21,21 +22,6 @@ function Edit() {
 
 
     let history = useNavigate();
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-            let a = Members.find(m => m.id == localStorage.getItem("id"))
-            a.Name = name;
-            a.Phone = phone;
-            a.Age = age;
-            a.Subscription = subscription;
-            a.Sessions = sessions;
-            a.Experience = experience;
-            a.Horse = horse;
-            a.Remaining = remaining;
-            history(`/information/${a.id}`);
-        
-        }
     useEffect (()=>{
         setName(localStorage.getItem('Name'))
         setPhone(localStorage.getItem('Phone'))
@@ -44,10 +30,17 @@ function Edit() {
         setExperience(localStorage.getItem('Experience'))
         setHorse(localStorage.getItem('Horse'))
         setRemaining(localStorage.getItem('Remaining'))
-        setId(localStorage.getItem('Id'))
         setAge(localStorage.getItem('Age'))
         setEmail(localStorage.getItem('Email'))
     },[])
+    const handleSubmit = async(e) => {
+        e.preventDefault();
+           const userDoc= doc(db,'esers',id);
+            updateDoc(userDoc, {Name:name},{Age:age},{Phone:phone},{Subscription:subscription},
+            {Remaining:remaining},{Sessions:sessions},{Experience:experience},{Horse:horse});
+            history(`/information/${id}`);
+        
+        }
     return (
         <div className="edit-container">
             <img className='edit-image' src={homeImage} alt='Home Background' />
@@ -61,7 +54,7 @@ function Edit() {
                         </Form.Control>
                     </Form.Group>
                 </Form>
-                <Form className='edit-form'>Phone
+                <Form className='edit-form'>Email
                     <Form.Group className='mb-3' controlId='formName'>
                         <Form.Control className="format-from" type='text' placeholder='Enter email' value={email} required onChange={(e) => setEmail(e.target.value)}>
                         </Form.Control>

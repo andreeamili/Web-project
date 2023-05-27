@@ -22,9 +22,7 @@ function Information() {
     const [phone, setPhone] = useState(0);
     const [password, setPassword] = useState('');
     const [cpassword, setCPassword] = useState('');
-    const [userBase, setUserBase] = useState('');
     const [isLoading, setIsLoading] = useState(false);
-    const usersCollectionRef = collection(db, 'users')
     
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -38,6 +36,13 @@ function Information() {
         const isValidEmail = validateEmail(email);
         if (!isValidEmail) {
             toast.error('Email invalid');
+        }
+        if(age<0 || age>100){
+            toast.error('Age invalid');
+        }
+        if(phone<0 || phone.length<10)
+        {
+            toast.error('Phone number invalid');
         }
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)

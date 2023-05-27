@@ -57,6 +57,10 @@ function Information() {
           history('/authentication');
         }
       }
+const handlEdit = ()=>{
+  history(`/edit/${member.id}`)
+}
+
     const handleLogout = () =>{
 
       signOut(auth).then(() => {
@@ -94,9 +98,7 @@ function Information() {
         <div className='name-information'> <strong>Nivel de experienta: </strong>{member.Experience}<br></br>
         </div>
         </>)}
-       <Link to='/edit'>
-        <div className='create-btn-info create-btn-info'>Edit</div>
-        </Link>
+        <div onClick={()=>handlEdit(member.id)} className='create-btn-info create-btn-info'>Edit</div>
         <div className='create-btn-info create-btn-info' onClick={()=>handleLogout(member.id)}>Logout</div>
         <Link to='/other'>
         <div className='create-btn-info create-btn-info' >See others</div>

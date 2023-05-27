@@ -125,12 +125,12 @@
    text-align: center !important;
  }
  
- @media (max-width: 700px) {
+ @media (min-width: 700px) {
      .edit-link {
        font-size: 2vh;
      }
      .subtext{
-       font-size: 2vh;
+       font-size: 3vh;
      }
        
    }
@@ -138,7 +138,7 @@
    
    @media (min-width: 350px) and (max-width: 700px) {
      .text {
-       font-size: 0.5em;
+       font-size: 1em;
        }
      .space{
        font-size: 0.8em;
@@ -148,7 +148,7 @@
          
        }
        .subtext{
-         font-size: 0.7em;
+         font-size: 1em;
        }
  
  

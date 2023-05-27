@@ -24,7 +24,7 @@ function Authentication() {
     const user = userCredential.user;
     
     toast.success("Login successful...")
-    history(`/`);
+    history(`/information/${user.uid}`);
   })
   .catch((error) => {
     setIsLoading(false);

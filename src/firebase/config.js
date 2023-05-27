@@ -40,6 +40,7 @@ export const createUserDocument = async (user, additionalName, additionalAge, ad
     const  Sessions  = 0;
     const  Subscription  = 0;
     const  Horse  = "none";
+    const Remaining =0;
     try {
       userRef.set({
         Name,
@@ -48,7 +49,8 @@ export const createUserDocument = async (user, additionalName, additionalAge, ad
         Experience,
         Sessions,
         Subscription,
-        Horse
+        Horse,
+        Remaining
       })
     } catch (error) {
       console.log("Error in creating use", error);

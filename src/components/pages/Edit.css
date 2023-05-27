@@ -68,9 +68,11 @@
 .create-btn-font-edit{
   font-size: 1.5vw;
   color: aliceblue;
-  padding: 3%;
-  
+  padding: 3%; 
 }
+.create-btn-edit:hover {
+  transform: scale(1.25);
+} 
 
 @media (min-width: 206px) and (max-width: 768px) {
     .text-header-edit {
