@@ -4,14 +4,10 @@ import homeImage from '../pages/pictures/contact-background.jpg';
 import { Form } from 'react-bootstrap';
 import Loader from './Loader'
 import { useNavigate } from 'react-router-dom';
-import Footer from '../Footer';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { db } from "../../firebase/config";
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth, createUserDocument } from '../../firebase/config'
-import { addDoc } from 'firebase/firestore';
-import { collection, getDocs } from "firebase/firestore";
 
 
 function Information() {
@@ -32,17 +28,26 @@ function Information() {
 
         if (password !== cpassword) {
             toast.error("Password do not match.")
+            return;
         }
         const isValidEmail = validateEmail(email);
         if (!isValidEmail) {
             toast.error('Email invalid');
+            return;
         }
         if(age<0 || age>100){
             toast.error('Age invalid');
+            return;
         }
         if(phone<0 || phone.length<10)
         {
             toast.error('Phone number invalid');
+            return;
+        }
+        if(name === "")
+        {
+            toast.error('Name invalid');
+            return;
         }
         setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)

@@ -12,8 +12,6 @@ import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 function Information() {
   const { id } = useParams();
 
-
-
   const [usersList, setUsersList] = useState([]);
   const usersCollectionRef = collection(db, 'users')
   useEffect(() => {

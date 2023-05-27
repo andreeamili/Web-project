@@ -6,16 +6,14 @@ import { Link } from 'react-router-dom';
 import { SidebarData } from './SideBarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { auth, db } from '../firebase/config';
-import { collection, getDocs } from 'firebase/firestore';
+import {  onAuthStateChanged } from "firebase/auth";
+import { auth} from '../firebase/config';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const [userName, setUserName] = useState("");
   const [id, setId]=useState("");
   const showSidebar = () => setSidebar(!sidebar);
-  //Monitor currently sign in user
   useEffect(()=>{
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -28,28 +26,6 @@ function Navbar() {
       }
     });
   },[])
-  const [usersList, setUsersList] = useState([]);
-  const usersCollectionRef = collection(db, 'users')
-  useEffect(() => {
-      const getUsersList = async () => {
-          try {
-              const data = await getDocs(usersCollectionRef);
-              const filteredData = data.docs.map((doc) => ({
-                  ...doc.data(),
-                  id: doc.id
-              }));
-              setUsersList(filteredData);
-              console.log(filteredData )
-              console.log("ce e in baza ")
-          }
-          catch (err) {
-              console.error(err);
-          }
-      };
-
-      getUsersList();
-  },[]);
-  const user = usersList.find((user) => user.id === id);
   console.log(id)
   return (
     <>
@@ -89,20 +65,14 @@ function Navbar() {
 
             <li hey="6" className="nav-text">
               {userName !== "cacaca" ?(
-                <>
-                {usersList.length > 0 && (
-                  <>
                 <Link  to={`/information/${id}`}>
                   <AiIcons.AiOutlineUserAdd />
-                  <span>Hi, {user.Name.name} </span>
+                  <span>Your account </span>
                 </Link>
-                </>
-              )}
-            </>
               ):(
                 <Link to="/authentication">
                   <AiIcons.AiOutlineUserAdd />
-                  <span>My account </span>
+                  <span>Sign in</span>
                 </Link>
               )}
               

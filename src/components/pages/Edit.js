@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 import './Edit.css'
 import { db } from "../../firebase/config";
-import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
+import { doc,  updateDoc } from "firebase/firestore";
 import { toast } from "react-toastify";
 
 function Edit() {

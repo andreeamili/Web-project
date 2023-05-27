@@ -2,7 +2,6 @@ import React from 'react'
 import Video from '../Video';
 import './Competitions.css'
 import SlideShow from '../SlideShow';
-import Footer from '../Footer';
  
 function Competitions() {
   return (

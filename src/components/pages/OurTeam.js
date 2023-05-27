@@ -9,7 +9,6 @@ import image1g from './pictures/gruia-antrenor1.jpg'
 import image2g from './pictures/gruia3.jpg'
 import image1d from './pictures/daniel-antrenor1.jpg'
 import image2d from './pictures/daniel-antrenor2.jpg'
-import Footer from '../Footer'
 
 function OurTeame() {
     return (

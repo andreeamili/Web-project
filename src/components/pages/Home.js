@@ -1,8 +1,6 @@
 import React from 'react'
 import homeImage from '../pages/pictures/Home_Fundal.jpg';
-import downImage from './pictures/horse-down.jpg'
 import './Home.css';
-import Footer from '../Footer';
 
 function Home() {
   
