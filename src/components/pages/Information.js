@@ -72,7 +72,7 @@ function Information() {
       <div className="information-wrapper">
         <div className='text-header-information'>Your account
         </div>
-        <div className='information-account'>Account soareciiiiiii
+        <div className='information-account'>Your Account
         </div>
 
         {usersList.length > 0 && (
