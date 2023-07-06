@@ -21,7 +21,7 @@ function Edit() {
 
     let history = useNavigate();
     const isValidExperience = (value) => {
-        const validOptions = ['Beginner','beginner', 'Intermediate','intermediate', 'Advanced','advanced', 'professional','P{rofessional'];
+        const validOptions = ['Beginner','beginner', 'Intermediate','intermediate', 'Advanced','advanced', 'professional','Professional'];
         return validOptions.includes(value);
       };
      
