@@ -4,10 +4,9 @@
 }
 .about-us-image {
   position: relative;
-  max-width: 1600px;
   width: 100%;
   height: auto;
-  max-height: 500px;
+  max-height: 600px;
   box-shadow: 0 0.188em 1.550em rgb(12, 12, 12);
 }
 

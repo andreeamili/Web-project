@@ -9,10 +9,9 @@
     top: 0;
     left: 0;
     right: 0;
-    max-width: 1600px;
     width: 100%;
     height: auto;
-    max-height: 500px;
+    max-height: 600px;
     box-shadow: 0 0.188em 1.550em rgb(20, 20, 20);
     z-index: -2;
 }
